@@ -4,6 +4,8 @@ import { Home } from "./Pages/Home"
 import { Contact } from "./Pages/Contact"
 import { Footer } from "./Components/Footer"
 import { About } from "./Pages/About"
+import { Listing } from "./Pages/Listing"
+import { Gallery } from "./Pages/Gallery"
 
 function App() {
 
@@ -28,6 +30,8 @@ function AppWrapper() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/listing" element={<Listing />} />
+        <Route path="/gallery" element={<Gallery />} />
 
 
       </Routes>

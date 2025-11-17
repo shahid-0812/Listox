@@ -40,11 +40,12 @@ export const Navbar = () => {
                     <i className="bi bi-list lg:hidden max-sm:flex" onClick={() => setMenuOpen(!menuOpen)}></i>
                     <div className="flex items-center gap-8 px-10 py-6  max-lg:hidden uppercase text-sm">
                         <NavLink to="/" className={hover}>Home</NavLink>
-                        <NavLink to="/about" className={hover}>listings</NavLink>
+                        <NavLink to="/listing" className={hover}>listings</NavLink>
                         <NavLink to="/apartment" className={hover}>pricing</NavLink>
                         <NavLink to="/about" className={hover}>pages</NavLink>
                         <NavLink to="/gallery" className={hover}>news</NavLink>
                         <NavLink to="/contact" className={hover}>Contact</NavLink>
+                        <NavLink to="/gallery" className={hover}>Gallery</NavLink>
                     </div>
                 </div>
                 <div className="flex bg-[#6053f0]  items-center px-8 gap-2 max-lg:hidden rounded-full py-4">

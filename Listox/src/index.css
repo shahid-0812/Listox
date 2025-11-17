@@ -130,3 +130,24 @@ body {
 .active {
   color: #ed5548;
 }
+
+.imgOverlay {
+  position: relative;
+}
+
+.imgOverlay::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imgOverlay:hover::before {
+  opacity: 1;
+}

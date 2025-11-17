@@ -4,8 +4,6 @@ import { Heading } from '../Components/Heading';
 
 
 export const Contact = () => {
-
-
     const ContactDetails = [
         {
             id: 1,
@@ -32,6 +30,8 @@ export const Contact = () => {
             contact: "Sunday-Fri: 9 AM – 6 PM Saturday: 9 AM – 4 PM.",
         },
     ];
+
+
     return (
         <div className="flex flex-col  rounded-4xl m-5">
 

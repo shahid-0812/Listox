@@ -16,7 +16,6 @@ export const About = () => {
             <AboutDestination />
             <Team />
 
-
         </div>
     )
 }
