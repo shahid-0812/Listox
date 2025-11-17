@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+.regular {
+  font-weight: 400;
+}
+
+/* Medium */
+.medium {
+  font-weight: 500;
+}
+
+/* SemiBold */
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.round-left {
+  content: '';
+  width: 38px;
+  height: 38px;
+  mask-image: radial-gradient(circle 40px at 0 0, transparent 0, transparent 30px, black 31px);
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  bottom: 0px;
+  mask-mode: alpha;
+}
+
+.cursive {
+  font-family: "Just Another Hand";
+}
+
+@keyframes pulseScale {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.animate-pulse-scale {
+  animation: pulseScale 1s ease-in-out infinite;
+}
+
+.image-container {
+  position: relative;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.6), transparent 100%);
+  border-top-right-radius: 50%;
+  z-index: 1;
+}
+
+.content-inner {
+  display: inline-block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-position: center;
+  mask-position: center;
+  mask-image: url('../public/home/polygon-image-2.png');
+}
+
+.square {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ed5548;
+  border-radius: 50px;
+  width: calc(100% - 120px);
+  height: calc(100% - 10px);
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.scale-animation {
+  animation: scaleUp 2s infinite ease-in-out;
+}
+
+.teamImg {
+  border-radius: 150px 150px 50px 50px;
+}
+
+.active {
+  color: #ed5548;
+}
