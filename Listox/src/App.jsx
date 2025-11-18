@@ -6,6 +6,8 @@ import { Footer } from "./Components/Footer"
 import { About } from "./Pages/About"
 import { Listing } from "./Pages/Listing"
 import { Gallery } from "./Pages/Gallery"
+import { Pricing } from "./Pages/Pricing"
+import { Portfolio } from "./Pages/Portfolio"
 
 function App() {
 
@@ -32,6 +34,8 @@ function AppWrapper() {
         <Route path="/about" element={<About />} />
         <Route path="/listing" element={<Listing />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/portfolio" element={<Portfolio />} />
 
 
       </Routes>
