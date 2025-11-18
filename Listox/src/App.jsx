@@ -8,6 +8,7 @@ import { Listing } from "./Pages/Listing"
 import { Gallery } from "./Pages/Gallery"
 import { Pricing } from "./Pages/Pricing"
 import { Portfolio } from "./Pages/Portfolio"
+import { Shop } from "./Pages/Shop"
 
 function App() {
 
@@ -36,6 +37,7 @@ function AppWrapper() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/shop" element={<Shop />} />
 
 
       </Routes>

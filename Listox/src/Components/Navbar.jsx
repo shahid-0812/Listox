@@ -42,11 +42,34 @@ export const Navbar = () => {
                         <NavLink to="/" className={hover}>Home</NavLink>
                         <NavLink to="/listing" className={hover}>listings</NavLink>
                         <NavLink to="/pricing" className={hover}>pricing</NavLink>
-                        <NavLink to="/about" className={hover}>pages</NavLink>
+                        <div className="flex flex-col relative">
+                            <NavLink to="/about" className={hover}>pages</NavLink>
+                            {/* <div className="flex flex-col gap-3 text-[#8b8b8b] px-3 absolute bg-white left-1/2 -translate-x-1/2  py-3 -bottom-55 rounded-lg">
+                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
+                                    About
+                                </NavLink>
+                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
+                                    About
+                                </NavLink>
+                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
+                                    About
+                                </NavLink>
+                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
+                                    About
+                                </NavLink>
+                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
+                                    About
+                                </NavLink>
+                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
+                                    About
+                                </NavLink>
+                            </div> */}
+                        </div>
                         <NavLink to="/gallery" className={hover}>news</NavLink>
                         <NavLink to="/contact" className={hover}>Contact</NavLink>
                         <NavLink to="/gallery" className={hover}>Gallery</NavLink>
                         <NavLink to="/portfolio" className={hover}>Portfolio</NavLink>
+                        <NavLink to="/shop" className={hover}>Shop</NavLink>
                     </div>
                 </div>
                 <div className="flex bg-[#6053f0]  items-center px-8 gap-2 max-lg:hidden rounded-full py-4">

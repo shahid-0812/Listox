@@ -70,7 +70,7 @@ export const Portfolio = () => {
                 </div>
 
             </div>
-            <div className="max-w-7xl mx-auto w-full flex flex-col gap-5 items-center justify-center">
+            <div className="max-w-7xl mx-auto w-full flex flex-col gap-10 items-center justify-center">
                 <Heading
                     span='our portfolio'
                     heading='Checkout our recently completed work'
@@ -84,8 +84,27 @@ export const Portfolio = () => {
                     <span>Insurance</span>
                     <span>Strategy</span>
                 </div>
-                <div className="flex gap-8">
-                    <div className="flex flex-col rounded-xl"></div>
+                <div className="flex gap-5 flex-wrap items-center justify-center">
+                    {
+                        PorfolioCard.map((item) => (
+
+
+                            <div key={item.id} className="flex flex-col rounded-xl w-[32%] overflow-hidden group">
+                                <div className="w-full h-[350px] relative">
+                                    <img src={`home/listing-${item.id}.jpg`} alt="" className='rounded-xl w-full h-full object-cover' />
+                                    <div className="absolute rounded-xl top-0 left-0 w-full h-full bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                                </div>
+                                <div className="flex flex-col p-8 -mt-15 mb-5 z-1 bg-white shadow-lg rounded-tl-none rounded-xl w-[90%] relative">
+                                    <span className='absolute -top-5 right-5 bg-[#ed5548] rounded-full px-3 py-2 text-white group-hover:bg-[#6053f0] transition duration-300'>
+                                        <i className="bi bi-arrow-right"></i>
+                                    </span>
+                                    <span className='text-xl bold '>{item.title}</span>
+                                    <span className='text-[#8b8b8b] underline'>Finance, Insurance</span>
+                                </div>
+                            </div>
+
+                        ))
+                    }
                 </div>
             </div>
         </div>
