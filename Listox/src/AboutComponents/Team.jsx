@@ -81,7 +81,8 @@ export const Team = () => {
                             slidesPerView: 1,
                         },
                         768: {
-                            slidesPerView: 3,
+                            slidesPerView: 2
+                            ,
                         },
                         1025: {
                             slidesPerView: 4,
@@ -136,7 +137,7 @@ export const Team = () => {
                 </div>
             </div>
             <div className="border-t border-[#E2E2E2] mt-20 ">
-                <div className="flex items-center  max-w-360 mx-auto w-full">
+                <div className="flex items-center  max-w-360 mx-auto w-full overflow-hidden">
                     <div className="flex items-center text-xl border-r pr-6 py-15 border-[#E2E2E2] w-3/12">
                         <span className='semibold text-center max-w-[150px]'>
                             Trusted by top companies
@@ -156,6 +157,18 @@ export const Team = () => {
                             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
 
                             className="w-3/4"
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 3,
+                                },
+                                768: {
+                                    slidesPerView: 3
+                                    ,
+                                },
+                                1025: {
+                                    slidesPerView: 6,
+                                },
+                            }}
                         >
                             {images.map((img, index) => (
                                 <SwiperSlide key={index}>

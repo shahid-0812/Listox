@@ -9,6 +9,11 @@ import { Gallery } from "./Pages/Gallery"
 import { Pricing } from "./Pages/Pricing"
 import { Portfolio } from "./Pages/Portfolio"
 import { Shop } from "./Pages/Shop"
+import { News } from "./Pages/News"
+import { HowITWorks } from "./Pages/HowITWorks"
+import { Events } from "./Pages/Events"
+import { Member } from "./Pages/Member"
+import ScrollToTop from "./Components/ScrollToTop"
 
 function App() {
 
@@ -28,7 +33,7 @@ function AppWrapper() {
     <>
 
       <Navbar />
-
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
@@ -38,6 +43,10 @@ function AppWrapper() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/howitworks" element={<HowITWorks />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/member" element={<Member />} />
 
 
       </Routes>

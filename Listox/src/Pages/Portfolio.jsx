@@ -89,7 +89,7 @@ export const Portfolio = () => {
                         PorfolioCard.map((item) => (
 
 
-                            <div key={item.id} className="flex flex-col rounded-xl w-[32%] overflow-hidden group">
+                            <div key={item.id} className="flex flex-col rounded-xl w-[32%] overflow-hidden group max-lg:w-[48%]">
                                 <div className="w-full h-[350px] relative">
                                     <img src={`home/listing-${item.id}.jpg`} alt="" className='rounded-xl w-full h-full object-cover' />
                                     <div className="absolute rounded-xl top-0 left-0 w-full h-full bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300"></div>

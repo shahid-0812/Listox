@@ -1,5 +1,7 @@
 import React from 'react'
 import { Heading } from '../Components/Heading';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 export const Plans = () => {
     const Plans = [
         {
@@ -25,71 +27,90 @@ export const Plans = () => {
         },
     ];
     return (
-        <div className="flex flex-col gap-10 py-15 max-w-7xl mx-auto w-full">
+        <div className="flex flex-col gap-10 py-15 max-w-7xl mx-auto w-full max-lg:px-5">
             <div className="flex items-center justify-between w-full">
                 <Heading
                     span='affordable price'
                     heading='Choose our package'
                 />
-                <button className="text-white text-sm max-lg:w-full bg-[#ED5548] px-6 py-3 rounded-full  flex items-center gap-2 cursor-pointer hover:opacity-80 transition duration-300">
+                <button className="text-white text-sm  bg-[#ED5548] px-6 py-3 rounded-full  flex items-center gap-2 cursor-pointer hover:opacity-80 transition duration-300">
                     <span>Add Listing</span>
                     <i className="bi bi-plus-lg"></i>
                 </button>
             </div>
-            <div className="flex items-center justify-center gap-5 flex-wrap">
-                {
-                    Plans.map((plan) => (
+            <div className="w-full">
+                <Swiper
+                    slidesPerView={3}
+                    spaceBetween={20}
+                    loop={true}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1025: {
+                            slidesPerView: 3,
+                        },
+                    }}
+                >
 
+                    {
+                        Plans.map((plan) => (
 
-                        <div key={plan.id} className="flex flex-col rounded-xl shadow-xl overflow-hidden w-[32%]">
-                            <div
+                            <SwiperSlide key={plan.id}>
+                                <div className="flex flex-col rounded-xl shadow-xl overflow-hidden max-lg:w-full">
+                                    <div
 
-                                style={{
-                                    backgroundImage: "url('/home/bg-price.png')",
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundPosition: "center top",
-                                    backgroundColor: "#ED5548",
-                                    backgroundBlendMode: "multiply",
-                                }}
+                                        style={{
+                                            backgroundImage: "url('/home/bg-price.png')",
+                                            backgroundRepeat: "repeat",
+                                            backgroundPosition: "center top",
+                                            backgroundColor: "#ED5548",
+                                            backgroundBlendMode: "multiply",
+                                        }}
 
-                                className="flex flex-col items-center p-8 gap-3  rounded-t-lg text-white">
-                                <span className='text-sm uppercase'>{plan.plan} pack</span>
-                                <h1 className='text-4xl bold'>
-                                    <span className='text-lg'>$</span>
-                                    {plan.price}
-                                </h1>
-                                <span className="semibold">
-                                    Suitable For Any IT Solutions.
-                                </span>
-                            </div>
-                            <div className="flex flex-col gap-3 bg-white p-8">
-                                <div className="flex items-center gap-2">
-                                    <i className="bi bi-check text-xl text-[#ED5548]"></i>
-                                    <span className='text-[#8b8b8b] semibold'>{plan.post} listing Post</span>
+                                        className="flex flex-col items-center p-8 gap-3  rounded-t-lg text-white">
+                                        <span className='text-sm uppercase'>{plan.plan} pack</span>
+                                        <h1 className='text-4xl bold'>
+                                            <span className='text-lg'>$</span>
+                                            {plan.price}
+                                        </h1>
+                                        <span className="semibold">
+                                            Suitable For Any IT Solutions.
+                                        </span>
+                                    </div>
+                                    <div className="flex flex-col gap-3 bg-white p-8">
+                                        <div className="flex items-center gap-2">
+                                            <i className="bi bi-check text-xl text-[#ED5548]"></i>
+                                            <span className='text-[#8b8b8b] semibold'>{plan.post} listing Post</span>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <i className="bi bi-check text-xl text-[#ED5548]"></i>
+                                            <span className='text-[#8b8b8b] semibold'>{plan.expire} days expiration</span>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <i className="bi bi-check text-xl text-[#ED5548]"></i>
+                                            <span className='text-[#8b8b8b] semibold'>Featured Listing</span>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <i className="bi bi-check text-xl text-[#ED5548]"></i>
+                                            <span className='text-[#8b8b8b] semibold'>Edit Your Listing</span>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <i className="bi bi-check text-xl text-[#ED5548]"></i>
+                                            <span className='text-[#8b8b8b] semibold'>24/7 Email Support</span>
+                                        </div>
+                                        <button className="text-white text-sm w-fit max-lg:w-full bg-[#ED5548] mt-5 px-6 py-3 rounded-lg cursor-pointer hover:opacity-80 transition duration-300">
+                                            Add Listing
+                                        </button>
+                                    </div>
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <i className="bi bi-check text-xl text-[#ED5548]"></i>
-                                    <span className='text-[#8b8b8b] semibold'>{plan.expire} days expiration</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <i className="bi bi-check text-xl text-[#ED5548]"></i>
-                                    <span className='text-[#8b8b8b] semibold'>Featured Listing</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <i className="bi bi-check text-xl text-[#ED5548]"></i>
-                                    <span className='text-[#8b8b8b] semibold'>Edit Your Listing</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <i className="bi bi-check text-xl text-[#ED5548]"></i>
-                                    <span className='text-[#8b8b8b] semibold'>24/7 Email Support</span>
-                                </div>
-                                <button className="text-white text-sm w-fit max-lg:w-full bg-[#ED5548] mt-5 px-6 py-3 rounded-lg cursor-pointer hover:opacity-80 transition duration-300">
-                                    Add Listing
-                                </button>
-                            </div>
-                        </div>
-                    ))
-                }
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
             </div>
         </div>
     )

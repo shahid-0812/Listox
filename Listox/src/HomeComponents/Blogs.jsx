@@ -55,7 +55,6 @@ export const Blogs = () => {
             <Heading
                 span='LATEST BLOG POSTS'
                 heading='News that matters recent stories & analysis'
-
                 center='text-center'
                 items='center'
               

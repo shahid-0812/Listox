@@ -37,8 +37,8 @@ export const Shop = () => {
     return (
         <div className='m-5'>
             <PageBanner />
-            <div className="flex justify-between gap-10 max-w-7xl w-full mx-auto py-15">
-                <div className="w-3/4 flex flex-col gap-5">
+            <div className="flex justify-between gap-10 max-w-7xl w-full mx-auto py-15 max-lg:flex-col">
+                <div className="w-3/4 flex flex-col gap-5 max-lg:w-full">
                     <div className="flex w-full justify-between items-center">
                         <span className='text-[#858585]'>Showing all 6 results</span>
                         <select name="" id="" className='bg-[#f2f2f2] text-[#8b8b8b] px-5 py-3'>
@@ -69,7 +69,7 @@ export const Shop = () => {
                         }
                     </div>
                 </div>
-                <div className='w-3/12 flex flex-col gap-5'>
+                <div className='w-3/12 flex flex-col gap-5 max-lg:w-full'>
                     <div className="flex flex-col gap-5 border border-[#e2e2e2] rounded-lg p-5">
                         <h1 className='text-lg bold uppercase border-b pb-2 border-[#e2e2e2]'>Categories</h1>
                         <div className="flex flex-col gap-5 text-[#8b8b8b] medium">

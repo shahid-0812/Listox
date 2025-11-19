@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
@@ -5,8 +6,10 @@ import { Link, NavLink } from 'react-router-dom'
 export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [pageOpen, setPageOpen] = useState(false);
 
-    const hover = 'regular hover:text-[#ed5548] transition semibold'
+    const hover = 'hover:text-[#ed5548] transition semibold'
+    const hover2 = 'px-6 py-3 border-b border-gray-300 hover:text-[#ed5548] transition semibold text-[#8b8b8b]'
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,7 +32,7 @@ export const Navbar = () => {
         <>
             <nav
                 className={`fixed  z-101 flex justify-between items-center  backdrop-blur-md transition-all duration-500
-      ${scrolled
+                         ${scrolled
                         ? 'w-full left-0 top-0 translate-x-0 rounded-none bg-white shadow-md'
                         : 'left-1/2 transform -translate-x-1/2 w-[90%] top-15  rounded-full bg-gray-100 bg-opacity-90 my-10'
                     }`}
@@ -38,38 +41,67 @@ export const Navbar = () => {
 
                     <img src="/logo.png" alt="logo" className='h-8' />
                     <i className="bi bi-list lg:hidden max-sm:flex" onClick={() => setMenuOpen(!menuOpen)}></i>
-                    <div className="flex items-center gap-8 px-10 py-6  max-lg:hidden uppercase text-sm">
+                    <div className="flex items-center gap-8 px-10 max-lg:hidden uppercase text-sm">
                         <NavLink to="/" className={hover}>Home</NavLink>
                         <NavLink to="/listing" className={hover}>listings</NavLink>
                         <NavLink to="/pricing" className={hover}>pricing</NavLink>
-                        <div className="flex flex-col relative">
-                            <NavLink to="/about" className={hover}>pages</NavLink>
-                            {/* <div className="flex flex-col gap-3 text-[#8b8b8b] px-3 absolute bg-white left-1/2 -translate-x-1/2  py-3 -bottom-55 rounded-lg">
-                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
-                                    About
-                                </NavLink>
-                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
-                                    About
-                                </NavLink>
-                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
-                                    About
-                                </NavLink>
-                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
-                                    About
-                                </NavLink>
-                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
-                                    About
-                                </NavLink>
-                                <NavLink className={`px-10 border-b border-[#8b8b8b] text-[#8b8b8b]!`}>
-                                    About
-                                </NavLink>
-                            </div> */}
+                        <div onMouseEnter={() => setPageOpen(true)} onMouseLeave={() => setPageOpen(false)} className="relative cursor-pointer  py-8">
+                            <span className={hover}>Pages
+
+                                <i
+                                    className={`bi bi-chevron-down ml-2 inline-block transform transition-transform duration-300 ${pageOpen ? "rotate-180" : "rotate-0"
+                                        }`}
+                                ></i>
+                            </span>
+                            <AnimatePresence>
+                                {pageOpen && <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{
+                                        duration: 0.4,
+                                        ease: [0.2, 0, 0.2, 1]  // fast start, slow end
+                                    }}
+                                    className="absolute left-1/2 -translate-x-1/2 bg-white shadow-lg capitalize rounded-lg w-50 mt-8  flex flex-col py-3 overflow-hidden"
+                                >
+                                    <NavLink to="/about" className={hover2}>
+                                        About
+                                    </NavLink>
+
+                                    <NavLink to="/portfolio" className={hover2}>
+                                        Portfolio
+                                    </NavLink>
+
+                                    <NavLink to="/shop" className={hover2}>
+                                        Shop
+                                    </NavLink>
+
+                                    <NavLink to="/gallery" className={hover2}>
+                                        Gallery
+                                    </NavLink>
+
+                                    <NavLink to="/howitworks" className={hover2}>
+                                        How It Works
+                                    </NavLink>
+
+                                    <NavLink to="/events" className={hover2}>
+                                        Events
+                                    </NavLink>
+
+                                    <NavLink to="/testimonials" className={hover2}>
+                                        Testimonials
+                                    </NavLink>
+
+                                    <NavLink to="/member" className="px-6 py-2 hover:text-[#ed5548] transition semibold text-[#8b8b8b]">
+                                        Our Member
+                                    </NavLink>
+
+                                </motion.div>}
+                            </AnimatePresence>
                         </div>
-                        <NavLink to="/gallery" className={hover}>news</NavLink>
+                        <NavLink to="/news" className={hover}>news</NavLink>
                         <NavLink to="/contact" className={hover}>Contact</NavLink>
-                        <NavLink to="/gallery" className={hover}>Gallery</NavLink>
-                        <NavLink to="/portfolio" className={hover}>Portfolio</NavLink>
-                        <NavLink to="/shop" className={hover}>Shop</NavLink>
+
                     </div>
                 </div>
                 <div className="flex bg-[#6053f0]  items-center px-8 gap-2 max-lg:hidden rounded-full py-4">

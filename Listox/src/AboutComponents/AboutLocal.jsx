@@ -93,7 +93,7 @@ export const AboutLocal = () => {
 
     ];
     return (
-        <div className=" py-15 rounded-3xl overflow-hidden border border-[#e2e2e2] relative ">
+        <div className=" py-15 rounded-3xl overflow-hidden border border-[#e2e2e2] relative max-lg:px-5">
             <img src="/home/bg-02.jpg" alt="" className='w-full h-full object-cover absolute top-0 left-0 -z-1' />
             <div className="max-w-7xl mx-auto w-full flex flex-col justify-center gap-10">
                 <div className="flex justify-between items-center">
@@ -140,7 +140,7 @@ export const AboutLocal = () => {
                                 slidesPerView: 1,
                             },
                             768: {
-                                slidesPerView: 3,
+                                slidesPerView: 2,
                             },
                             1025: {
                                 slidesPerView: 3,

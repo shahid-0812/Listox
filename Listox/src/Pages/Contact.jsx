@@ -36,7 +36,7 @@ export const Contact = () => {
         <div className="flex flex-col  rounded-4xl m-5">
 
             <PageBanner />
-            <div className="flex  rounded-3xl mt-5 relative">
+            <div className="flex flex-col rounded-3xl mt-5 relative">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8353.144344522152!2d-0.12738773690856853!3d51.505791434741774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2sLondon%20Eye!5e0!3m2!1sen!2sin!4v1763098250669!5m2!1sen!2sin"
 
                     allowFullScreen
@@ -44,12 +44,12 @@ export const Contact = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                     className='w-full  h-[450px] rounded-3xl'
                 ></iframe>
-                <div className="flex max-w-7xl w-full mx-auto absolute -bottom-30 -translate-x-1/2  left-1/2 gap-5">
+                <div className="flex max-w-7xl w-full mx-auto absolute -bottom-30 -translate-x-1/2  left-1/2 gap-5 max-lg:static max-lg:translate-0 max-lg:flex-wrap">
                     {
                         ContactDetails.map((detail) => (
 
 
-                            <div key={detail.id} className="flex flex-col items-center justify-center bg-white rounded-2xl w-[24%] px-8 py-10 gap-3 border border-[#e2e2e2]">
+                            <div key={detail.id} className="flex flex-col items-center justify-center bg-white rounded-2xl w-[24%] max-lg:w-[48%] px-8 py-10 gap-3 border border-[#e2e2e2]">
                                 <span className='bg-[#f2f2f2] text-4xl p-5 rounded-2xl y'>
                                     <i className={`bi bi-${detail.icon} text-[#ed5548]`}></i>
                                 </span>

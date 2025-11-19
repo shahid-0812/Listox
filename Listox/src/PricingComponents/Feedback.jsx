@@ -3,7 +3,7 @@ import { Heading } from '../Components/Heading'
 
 export const Feedback = () => {
     return (
-        <div className='relative py-25 w-full'>
+        <div className='relative py-25 w-full max-lg:px-5'>
             <img src="/home/bg-10.png" alt="" className="absolute -z-1 top-0 left-0 w-full h-full object-cover" />
             <div className="flex items-center justify-between gap-15 max-w-7xl mx-auto w-full">
                 <div className="flex flex-col gap-3 w-2/5">
@@ -34,7 +34,7 @@ export const Feedback = () => {
                     </span>
                 </div>
                 <div className='flex gap-5 w-3/5'>
-                    <div className="bg-white  p-6 flex flex-col w-full gap-8 rounded-2xl">
+                    <div className="bg-white  p-6 flex flex-col w-full gap-8 rounded-2xl max-lg:hidden">
                         <div className="flex justify-between items-center">
                             <div className="flex items-center gap-1 text-[#ed5548]">
                                 <i className="bi bi-star-fill"></i>
@@ -89,7 +89,7 @@ export const Feedback = () => {
 
                 </div>
             </div>
-            <div className="max-w-7xl mx-auto w-full relative h-50 bg-[#ed5548] flex justify-evenly items-center ">
+            <div className="max-w-7xl mx-auto w-full relative h-50 bg-[#ed5548] flex justify-evenly items-center translate-y-50">
                 <img src="/home/bg-cta.png" alt="n" className="absolute z-1 top-0 left-0 w-full h-full object-cover" />
                 <div className="flex items-center gap-5 text-white z-100">
                     <i className="bi bi-globe text-2xl"></i>

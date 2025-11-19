@@ -14,11 +14,11 @@ export const AboutListox = () => {
     }, [images.length]);
 
     return (
-        <div className="flex justify-center items-center gap-10 relative max-w-7xl mx-auto w-full py-25">
-            <img src="/home/bg-03.png" className='top-1/2 -translate-y-1/2 absolute -left-50 -z-1' alt="" />
-            <img src="/home/bg-04.png" className='-bottom-1/2 -translate-y-1/2 absolute -right-50 -z-1' alt="" />
+        <div className="flex justify-center items-center gap-10 relative max-w-7xl mx-auto w-full py-25 max-lg:flex-col ">
+            <img src="/home/bg-03.png" className='top-1/2 -translate-y-1/2 absolute -left-50 -z-1 max-lg:hidden' alt="" />
+            <img src="/home/bg-04.png" className='-bottom-1/2 -translate-y-1/2 absolute -right-50 -z-1 max-lg:hidden' alt="" />
             <div className="flex  relative">
-                <div className="overflow-hidden h-[480px] w-[400px] rounded-b-full">
+                <div className="overflow-hidden h-[480px] w-[400px] rounded-b-full max-lg:w-[600px]">
                     <img src="/home/image-02.jpg" alt="" className='w-full h-full object-cover' />
                 </div>
 
