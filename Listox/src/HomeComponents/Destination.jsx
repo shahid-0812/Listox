@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Heading } from "../Components/Heading";
+import { motion } from "framer-motion";
 
 export const Destination = () => {
     const prevRef = useRef(null);
@@ -102,7 +103,30 @@ export const Destination = () => {
                 <img src="/home/bg-04.png" alt="" className="absolute -bottom-50 right-0" />
                 <div className="w-1/2">
                     <div className="relative">
-                        <img src="/home/image-06.jpg" className="rounded-4xl w-full h-full object-cover" alt="" />
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                ease: "linear",
+                                duration: 3,
+                            }}
+                            className="absolute top-5 left-10" >
+                            <img src="/home/image-star.png" alt="" />
+                        </motion.div>
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                ease: "linear",
+                                duration: 3,
+                            }} className="absolute bottom-5 right-3">
+                            <img src="/home/image-star-2.png" alt="" />
+                        </motion.div>
+                        <div className="mask-poly">
+                            <img src="/home/image-06.jpg" className="rounded-4xl w-full h-full object-cover" alt="" />
+                        </div>
                         <div className="flex items-center justify-center absolute bottom-10 left-10 border-2 border-white rounded-full px-2 py-3">
                             <div className="backdrop-blur-lg flex flex-col items-center gap-2 rounded-full px-5 py-6 group-hover:bg-[#ed5548] transition duration-300">
                                 <span className="text-5xl text-white bold ">26</span>
@@ -135,6 +159,6 @@ export const Destination = () => {
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };

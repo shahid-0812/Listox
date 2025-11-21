@@ -50,10 +50,14 @@ export const Shop = () => {
                             Product.map((item) => (
 
 
-                                <div key={item.id} className="flex flex-col gap-3 w-[31%] p-5 shadowCard rounded-2xl group">
+                                <div key={item.id} className="flex flex-col gap-3 w-[31%] p-5 shadowCard rounded-2xl group cursor-pointer">
                                     <div className='relative rounded-xl overflow-hidden'>
                                         <img src={`/home/product-${item.id}.jpg`} alt="" />
                                         <div className="absolute top-0 left-0 w-full h-full bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                                        <button className='absolute flex items-center gap-2 px-4 py-2 bg-[#ed5548] bottom-4 left-1/2 -translate-x-1/2 text-white text-center opacity-0 group-hover:opacity-100 transition duration-300 translate-y-2 group-hover:translate-y-0'>
+                                            <i className="bi bi-cart-plus"></i>
+                                            <span className='bold whitespace-nowrap text-sm'>Add to cart</span>
+                                        </button>
                                     </div>
                                     <div className="flex flex-col gap-3">
                                         <span className="uppercase bold text-sm text-[#8b8b8b]">
@@ -77,7 +81,6 @@ export const Shop = () => {
                             <span>Film & Videos</span>
                             <span>Medical & Health</span>
                             <span>Organic Foods</span>
-
                         </div>
                     </div>
                     <div className="flex flex-col gap-5 border border-[#e2e2e2] rounded-lg p-5">

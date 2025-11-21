@@ -69,6 +69,10 @@ export const HeroSection = () => {
 
             </div>
             <div className="flex flex-col gap-10 bg-white px-19 z-10 max-w-7xl mx-auto w-full rounded-3xl py-15 absolute left-1/2 -translate-x-1/2 -bottom-20" >
+                <div className="w-full flex justify-between">
+                    <div className="corner-curve absolute -left-7.5 bottom-18"></div>
+                    <div className="corner-curve absolute -right-7.5 bottom-18 scale-x-[-1]"></div>
+                </div>
                 <div className="flex items-center rounded-full border border-[#e2e2e2] max-lg:overflow-hidden max-lg:gap-3 max-lg:flex-col max-lg:p-5 text-[#8b8b8b] max-lg:rounded-2xl">
                     <input type="text" placeholder="What are you looking for?" className="flex-1 border-none outline-none px-5 max-lg:w-full max-lg:text-center max-lg:py-3" />
                     <div className="flex justify-between items-center flex-1 border-x max-lg:border-x-0 max-lg:border-y border-[#e2e2e2] py-6 px-5 max-lg:w-full max-lg:py-3 max-lg:justify-center">

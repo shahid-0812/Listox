@@ -90,7 +90,7 @@ body {
   mask-size: cover;
   -webkit-mask-position: center;
   mask-position: center;
-  mask-image: url('../public/home/polygon-image-2.png');
+  mask-image: url('../home/polygon-image-2.png');
 }
 
 .square {
@@ -188,4 +188,64 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ed5548;
+}
+
+.lineText2 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.corner-curve {
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  mask-image: radial-gradient(circle 30px at 0 0,
+      transparent 0,
+      transparent 30px,
+      black 31px);
+  -webkit-mask-image: radial-gradient(circle 30px at 0 0,
+      transparent 0,
+      transparent 30px,
+      black 31px);
+}
+
+.mask-poly {
+  -webkit-mask-image: url('/home/polygon-image.png');
+  mask-image: url('/home/polygon-image.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+
+
+.mask-test {
+
+  -webkit-mask-image: url('/home/polygon-testimonial.png');
+  mask-image: url('/home/polygon-testimonial.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.mask-test2 {
+
+  -webkit-mask-image: url('/home/polygon-testimonial-2.png');
+  mask-image: url('/home/polygon-testimonial-2.png');
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  width: 1;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 1;
+  mask-size: 1;
 }

@@ -14,6 +14,10 @@ import { HowITWorks } from "./Pages/HowITWorks"
 import { Events } from "./Pages/Events"
 import { Member } from "./Pages/Member"
 import ScrollToTop from "./Components/ScrollToTop"
+import { Testimonials } from "./Pages/Testimonials"
+import { NewsDetails } from "./Pages/NewsDetails"
+import { EventDetails } from "./Pages/EventDetails"
+import { ProductDetails } from "./Pages/ProductDetails"
 
 function App() {
 
@@ -47,6 +51,10 @@ function AppWrapper() {
         <Route path="/howitworks" element={<HowITWorks />} />
         <Route path="/events" element={<Events />} />
         <Route path="/member" element={<Member />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/newsdetails" element={<NewsDetails />} />
+        <Route path="/eventdetails" element={<EventDetails />} />
+        <Route path="/productdetails" element={<ProductDetails />} />
 
 
       </Routes>

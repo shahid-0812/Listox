@@ -104,7 +104,7 @@ export const Navbar = () => {
 
                     </div>
                 </div>
-                <div className="flex bg-[#6053f0]  items-center px-8 gap-2 max-lg:hidden rounded-full py-4">
+                <div className="flex bg-[#6053f0]  items-center px-8 gap-2 max-lg:hidden rounded-full py-6">
                     <button className='px-8 bg-[#8075f3] text-white  text-sm rounded-full py-3 semibold'>Add Listings</button>
                     <span className='bg-[#8075f3] text-white rounded-full px-3 py-2 relative'>
                         <i className="bi bi-cart-fill"></i>
