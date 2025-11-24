@@ -11,7 +11,7 @@ export const DestinationTwo = () => {
 
     return (
         <div className='max-w-7xl w-full mx-auto py-15 flex -translate-y-40 max-lg:translate-y-0 max-lg:px-5 max-sm:flex-col max-sm:gap-5'>
-            <div className="w-1/2 flex flex-col justify-between  gap-5 px-18 pt-18 bg-white max-sm:w-full max-sm:px-0">
+            <div className="w-1/2 flex flex-col justify-between  gap-5 px-18 pt-18 bg-white max-sm:w-full max-lg:px-0 ">
                 <Heading
                     span='New Destination'
                     heading='Explore the best places to visit'

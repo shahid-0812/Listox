@@ -17,7 +17,7 @@ export const HeroSection = () => {
 
 
     return (
-        <div className="flex flex-col relative rounded-3xl m-5 overflow-hidden">
+        <div className="flex flex-col relative rounded-3xl overflow-hidden m-5">
             <NavHead />
 
 
@@ -69,10 +69,10 @@ export const HeroSection = () => {
 
 
             </div>
-            <div className="flex flex-col gap-10 bg-white px-19 z-10 max-w-7xl mx-auto w-full rounded-3xl py-15 absolute left-1/2 -translate-x-1/2 -bottom-20 max-sm:px-5 max-sm:w-fit max-sm:py-5" >
+            <div className="flex flex-col gap-10  bg-white px-19 z-10 max-w-7xl mx-auto w-full rounded-3xl py-15 absolute left-1/2 -translate-x-1/2 -bottom-15 max-sm:px-5 max-sm:w-fit max-sm:py-5 max-lg:py-5 max-lg:bottom-0" >
                 <div className="w-full flex justify-between">
-                    <div className="corner-curve absolute -left-7.5 bottom-18"></div>
-                    <div className="corner-curve absolute -right-7.5 bottom-18 scale-x-[-1]"></div>
+                    <div className="corner-curve absolute -left-7.5 bottom-13"></div>
+                    <div className="corner-curve absolute -right-7.5 bottom-13 scale-x-[-1]"></div>
                 </div>
                 <div className="flex items-center rounded-full border border-[#e2e2e2] max-lg:overflow-hidden max-lg:gap-3 max-lg:flex-col max-lg:p-5 text-[#8b8b8b] max-lg:rounded-2xl">
                     <input type="text" placeholder="What are you looking for?" className="flex-1 border-none outline-none px-5 max-lg:w-full max-lg:text-center max-lg:py-3" />
@@ -84,7 +84,7 @@ export const HeroSection = () => {
                         <span>All Categories</span>
                         <i className="bi bi-chevron-down"></i>
                     </div>
-                    <button className="text-white max-lg:w-full bg-[#ED5548] px-10 py-4 rounded-full m-2 flex items-center gap-3 cursor-pointer hover:opacity-80 transition duration-300">
+                    <button className="text-white max-lg:w-full bg-[#ED5548] px-10 py-4 rounded-full m-2 flex items-center gap-3 cursor-pointer max-sm:justify-center hover:opacity-80 transition duration-300">
                         <i className="bi bi-search"></i>
                         <span>Search</span>
                     </button>

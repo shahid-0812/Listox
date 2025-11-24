@@ -68,8 +68,8 @@ export const LocalBusinessesTwo = () => {
                 </div>
 
                 <img src="/home/bg-05.jpg" alt="" className='w-full h-full rounded-3xl object-cover absolute top-0 left-0 -z-1 opacity-50' />
-                <div className="flex justify-between gap-5 max-w-7xl w-full mx-auto mt-60 max0sm
-                flex-col">
+                <div className="flex justify-between gap-5 max-w-7xl w-full mx-auto mt-60 max-sm:flex-col
+               ">
                     <div className="flex flex-col gap-5 w-1/2 max-sm:w-full">
                         <Heading
                             span='local businesses'

@@ -35,11 +35,11 @@ export const Member = () => {
     return (
         <div className='m-5'>
             <PageBanner />
-            <div className="max-w-7xl mx-auto w-full my-15 bg-white shadow-xl flex items-center">
-                <div className="w-1/2">
+            <div className="max-w-7xl mx-auto w-full my-15 bg-white shadow-xl flex items-center h-[500px] max-sm:flex-col max-sm:h-full">
+                <div className="w-1/2 h-full max-sm:w-full">
                     <img src="/home/bg-8.jpg" alt="no" className='w-full h-full object-cover' />
                 </div>
-                <div className="w-1/2 flex flex-col px-20 gap-5">
+                <div className="w-1/2 flex flex-col px-20 gap-5 max-lg:px-10  max-sm:w-full max-sm:py-10">
                     <Heading
                         span='WE WORK FOR'
                         heading='Insuring your future'
@@ -47,7 +47,7 @@ export const Member = () => {
                     <span className="text-[#8b8b8b] max-w-[450px]">
                         There are many variations of pass of lorem sum available but the majority have suffered alteration in some form. Injected humour randomised words which.
                     </span>
-                    <div className="flex items-center gap-15">
+                    <div className="flex items-center gap-15 max-lg:gap-5 max-sm:flex-col max-sm:items-start">
                         <div className="flex flex-col  pb-3 border-b border-[#e2e2e2]">
                             <h1 className='text-6xl lineText bold'>
                                 6805
@@ -81,7 +81,7 @@ export const Member = () => {
 
                     {
                         Member.map((team, index) => (
-                            <div className="flex items-center flex-col w-[31%] relative">
+                            <div className="flex items-center flex-col w-[31%] max-lg:w-[47%] relative max-sm:w-full">
 
 
                                 <img src={`/home/team-${team.id}.jpg`} alt="" className='rounded-t-[200px] w-[90%] rounded-b-[50px]' />

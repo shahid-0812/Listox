@@ -44,7 +44,7 @@ export const HowITWorks = () => {
             <div className="max-w-7xl mx-auto w-full flex flex-col justify-center items-center gap-20 py-15 max-lg:items-start max-lg:justify-start">
                 {
                     Works.map((item) => (
-                        <div key={item.id} className="flex  items-end justify-center even:flex-row-reverse relative">
+                        <div key={item.id} className="flex  items-end justify-center even:flex-row-reverse relative max-sm:flex-col max-sm:even:flex-col max-sm:gap-5">
 
                             <img
                                 src="/home/bg-04.png"
@@ -52,7 +52,7 @@ export const HowITWorks = () => {
                                 className="absolute right-0 even:left-0 even:right-auto max-lg:hidden"
                             />
 
-                            <div className="flex flex-col gap-5 w-1/2 ">
+                            <div className="flex flex-col gap-5 w-1/2 max-sm:w-full">
                                 <span className='text-[#ed5548] border-b border-[#e2e2e2] semibold uppercase pb-1'>
                                     {item.sub}
                                 </span>
@@ -65,7 +65,7 @@ export const HowITWorks = () => {
                                     </span>
                                 </div>
                             </div>
-                            <div className="w-1/2 flex items-center justify-center relative">
+                            <div className="w-1/2 flex items-center justify-center relative max-sm:w-full">
                                 <img src={item.img} alt="" className=' h-full object-cover rounded-t-[90%] w-[70%] rounded-b-[50px]' />
                                 <div className="absolute top-0 left-1/12 border-2 border-[#6053f0] h-full rounded-t-[90%] w-[70%] rounded-b-[50px] flex items-start justify-start">
                                     <span className='text-6xl bold bg-[#6053f0] rounded-full px-8 py-9 text-white'>0{item.id}</span>
@@ -96,7 +96,7 @@ export const HowITWorks = () => {
                     items='center'
                 />
                 <div className="flex justify-center gap-25 items-center w-full relative max-lg:flex-col max-lg:px-5">
-                    <img src="/home/bg-19.png" alt="" className='absolute  right-0' />
+                    <img src="/home/bg-19.png" alt="" className='absolute  right-0 max-sm:hidden' />
                     <div className="flex flex-col gap-5 w-1/4 max-lg:w-full">
                         {
                             FAQ.map((que, index) => (

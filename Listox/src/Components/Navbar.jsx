@@ -7,8 +7,9 @@ export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [pageOpen, setPageOpen] = useState(false);
+    const [pageMobileOpen, setPageMobileOpen] = useState(false);
 
-    const hover = 'hover:text-[#ed5548] transition semibold'
+    const hover = 'hover:text-[#ed5548] transition semibold';
     const hover2 = 'px-6 py-3 border-b border-gray-300 hover:text-[#ed5548] transition semibold text-[#8b8b8b]'
 
     useEffect(() => {
@@ -39,10 +40,24 @@ export const Navbar = () => {
                     ${menuOpen ? "hidden" : "flex"}
                     `}
             >
-                <div className="flex justify-between items-center gap-5 px-8 max-lg:w-full max-lg:py-3">
+                <div className="flex justify-between items-center gap-5 px-8 max-lg:w-full  max-lg:p-0 max-lg:pl-6">
 
                     <img src="/logo.png" alt="logo" className='h-8 max-lg:h-6' />
-                    <i className="bi bi-list lg:hidden max-sm:flex" onClick={() => setMenuOpen(!menuOpen)}></i>
+                    <div className="flex items-center gap-3">
+
+                        <i className="bi bi-list text-4xl text-[#ed5548] lg:hidden max-sm:flex" onClick={() => setMenuOpen(!menuOpen)}></i>
+                        <div className="flex bg-[#6053f0]  items-center px-8 gap-2  rounded-full py-6 lg:hidden max-sm:flex max-sm:px-4 max-sm:py-3">
+                            <button className='px-8 bg-[#8075f3] text-white  text-sm rounded-full py-3 semibold max-sm:hidden'>Add Listings</button>
+                            <span className='bg-[#8075f3] text-white rounded-full px-3 py-2 relative'>
+                                <i className="bi bi-cart-fill"></i>
+                                <span className="absolute text-xs -top-1 -right-1 bg-white text-black rounded-full px-1">0</span>
+                            </span>
+                            <span className='bg-[#8075f3] text-white rounded-full px-3 py-2'>
+                                <i className="bi bi-search"></i>
+                            </span>
+                        </div>
+                    </div>
+
                     <div className="flex items-center gap-8 px-10 max-lg:hidden uppercase text-sm">
                         <NavLink to="/" className={hover}>Home</NavLink>
                         <NavLink to="/listing" className={hover}>listings</NavLink>
@@ -145,7 +160,57 @@ export const Navbar = () => {
                         <NavLink to="/" className="border-b border-[#e2e2e2] py-4 ">Home</NavLink>
                         <NavLink to="/listing" className="border-b border-[#e2e2e2] py-4 ">listings</NavLink>
                         <NavLink to="/pricing" className="border-b border-[#e2e2e2] py-4 ">pricing</NavLink>
+                        <div onClick={() => setPageMobileOpen(!pageMobileOpen)} className="flex flex-col border-b border-[#e2e2e2] py-4 ">
+                            <div className="flex justify-between items-center">
+                                <span>Pages</span>
+                                <i className={`bi bi-chevron-right ${pageMobileOpen ? "rotate-90" : ""} transition duration-300`}></i>
+                            </div>
+                            <AnimatePresence>
+                                {pageMobileOpen && <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{
+                                        duration: 0.5,
 
+                                    }}
+                                    className="flex flex-col gap-4 pt-5 px-5 text-[#8b8b8b]"
+                                >
+                                    <NavLink to="/about">
+                                        About
+                                    </NavLink>
+
+                                    <NavLink to="/portfolio">
+                                        Portfolio
+                                    </NavLink>
+
+                                    <NavLink to="/shop">
+                                        Shop
+                                    </NavLink>
+
+                                    <NavLink to="/gallery">
+                                        Gallery
+                                    </NavLink>
+
+                                    <NavLink to="/howitworks">
+                                        How It Works
+                                    </NavLink>
+
+                                    <NavLink to="/events">
+                                        Events
+                                    </NavLink>
+
+                                    <NavLink to="/testimonials">
+                                        Testimonials
+                                    </NavLink>
+
+                                    <NavLink to="/member">
+                                        Our Member
+                                    </NavLink>
+                                </motion.div>
+                                }
+                            </AnimatePresence>
+                        </div>
                         <NavLink to="/news" className="border-b border-[#e2e2e2] py-4 ">news</NavLink>
                         <NavLink to="/contact" className="border-b border-[#e2e2e2] py-4 ">Contact</NavLink>
 

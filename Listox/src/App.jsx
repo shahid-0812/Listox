@@ -59,7 +59,7 @@ function AppWrapper() {
 
       </Routes>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

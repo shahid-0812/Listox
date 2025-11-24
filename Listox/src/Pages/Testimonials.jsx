@@ -44,8 +44,8 @@ export const Testimonials = () => {
                 <div className=" py-25 my-5 rounded-t-3xl h-full border border-[#e2e2e2] relative max-lg:px-5 max-lg:py-15">
 
                     <img src="/home/bg-05.jpg" alt="" className='w-full h-full rounded-3xl object-cover absolute top-0 left-0 -z-1 opacity-50' />
-                    <div className="flex justify-between gap-5 max-w-7xl w-full mx-auto ">
-                        <div className="flex flex-col gap-5 w-1/2">
+                    <div className="flex justify-between gap-5 max-w-7xl w-full mx-auto max-sm:flex-col ">
+                        <div className="flex flex-col gap-5 w-1/2 max-sm:w-full">
                             <Heading
                                 span='local businesses'
                                 heading='What our customers feel about our services!'
@@ -69,7 +69,7 @@ export const Testimonials = () => {
                         </div>
 
 
-                        <div className="flex relative w-1/2">
+                        <div className="flex relative w-1/2 max-sm:w-full ">
                             <div className="square">
 
                             </div>
@@ -155,8 +155,8 @@ export const Testimonials = () => {
 
                     </div>
                 </div>
-                <div className="flex items-center justify-between gap-5 max-w-7xl w-full mx-auto py-15">
-                    <div className="w-3/4 flex flex-col gap-5 max-lg:w-1/2">
+                <div className="flex items-center justify-between gap-5 max-w-7xl w-full mx-auto py-15 max-sm:flex-col">
+                    <div className="w-3/4 flex flex-col gap-5 max-lg:w-1/2 max-sm:w-full">
                         <Heading
                             span='LOCAL BUSINESSES'
                             heading='What our customers feel about our services!'
@@ -191,7 +191,7 @@ export const Testimonials = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-3/12 flex flex-col max-lg:w-1/2 items-center">
+                    <div className="w-3/12 flex flex-col max-lg:w-1/2 items-center max-sm:w-full">
                         <div className='rounded-t-[150px] rounded-b-[20px] overflow-hidden w-[80%]'>
                             <img src="/home/image-12.jpg" alt=" h-full object-cover" />
                         </div>
