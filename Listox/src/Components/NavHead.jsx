@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export const NavHead = () => {
     const hover = "hover:text-white transition duration-300 cursor-pointer";
@@ -22,7 +23,7 @@ export const NavHead = () => {
                     <span>
                         <span className={`mx-1 ${hover2}`}>Sign</span>
                         or
-                        <span className={`mx-1 ${hover2}`}>Register</span>
+                        <Link to='/register' className={`mx-1 ${hover2}`}>Register</Link>
                     </span>
                 </div>
                 <span>|</span>

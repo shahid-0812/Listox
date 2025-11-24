@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 
-export const Navbar = () => {
+export const Navbar = ({ cartOpen, setCartOpen }) => {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [pageOpen, setPageOpen] = useState(false);
     const [pageMobileOpen, setPageMobileOpen] = useState(false);
+
 
     const hover = 'hover:text-[#ed5548] transition semibold';
     const hover2 = 'px-6 py-3 border-b border-gray-300 hover:text-[#ed5548] transition semibold text-[#8b8b8b]'
@@ -48,7 +49,7 @@ export const Navbar = () => {
                         <i className="bi bi-list text-4xl text-[#ed5548] lg:hidden max-sm:flex" onClick={() => setMenuOpen(!menuOpen)}></i>
                         <div className="flex bg-[#6053f0]  items-center px-8 gap-2  rounded-full py-6 lg:hidden max-sm:flex max-sm:px-4 max-sm:py-3">
                             <button className='px-8 bg-[#8075f3] text-white  text-sm rounded-full py-3 semibold max-sm:hidden'>Add Listings</button>
-                            <span className='bg-[#8075f3] text-white rounded-full px-3 py-2 relative'>
+                            <span onClick={() => setCartOpen(true)} className='bg-[#8075f3] text-white rounded-full px-3 py-2 relative cursor-pointer'>
                                 <i className="bi bi-cart-fill"></i>
                                 <span className="absolute text-xs -top-1 -right-1 bg-white text-black rounded-full px-1">0</span>
                             </span>
@@ -123,7 +124,7 @@ export const Navbar = () => {
                 </div>
                 <div className="flex bg-[#6053f0]  items-center px-8 gap-2 max-lg:hidden rounded-full py-6">
                     <button className='px-8 bg-[#8075f3] text-white  text-sm rounded-full py-3 semibold'>Add Listings</button>
-                    <span className='bg-[#8075f3] text-white rounded-full px-3 py-2 relative'>
+                    <span onClick={() => setCartOpen(true)} className='bg-[#8075f3] text-white rounded-full px-3 py-2 relative cursor-pointer'>
                         <i className="bi bi-cart-fill"></i>
                         <span className="absolute text-xs -top-1 -right-1 bg-white text-black rounded-full px-1">0</span>
                     </span>

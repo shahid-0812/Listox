@@ -1,5 +1,7 @@
 import { Navbar } from "./Components/Navbar"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useLocation } from "react-router-dom";
+
 import { Home } from "./Pages/Home"
 import { Contact } from "./Pages/Contact"
 import { Footer } from "./Components/Footer"
@@ -18,8 +20,13 @@ import { Testimonials } from "./Pages/Testimonials"
 import { NewsDetails } from "./Pages/NewsDetails"
 import { EventDetails } from "./Pages/EventDetails"
 import { ProductDetails } from "./Pages/ProductDetails"
+import { useState } from "react"
+import { Cart } from "./Components/Cart"
+import { Register } from "./Pages/Register";
 
 function App() {
+
+
 
   return (
     <>
@@ -33,10 +40,21 @@ function App() {
 export default App
 
 function AppWrapper() {
+  const [cartOpen, setCartOpen] = useState(false);
+  const location = useLocation();
+
+  const hideNavbarRoutes = ["/register"];
+
+  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
   return (
     <>
 
-      <Navbar />
+      {!shouldHideNavbar && (
+        <>
+          <Navbar cartOpen={cartOpen} setCartOpen={setCartOpen} />
+          <Cart cartOpen={cartOpen} setCartOpen={setCartOpen} />
+        </>
+      )}
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -55,11 +73,12 @@ function AppWrapper() {
         <Route path="/newsdetails" element={<NewsDetails />} />
         <Route path="/eventdetails" element={<EventDetails />} />
         <Route path="/productdetails" element={<ProductDetails />} />
+        <Route path="/register" element={<Register />} />
 
 
       </Routes>
 
-      <Footer />
+      {!shouldHideNavbar && <Footer />}
     </>
   )
 }
