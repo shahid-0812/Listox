@@ -6,7 +6,7 @@ export const EventDetails = () => {
         <div className='m-5'>
             <PageBanner />
             <div className="max-w-7xl mx-auto w-full py-15 flex flex-col items-center gap-5">
-                <div className="flex gap-5 items-center border-b border-[#e2e2e2] pb-5">
+                <div className="flex gap-5 items-center border-b border-[#e2e2e2] pb-5 max-lg:flex-col">
                     <div className="flex flex-col gap-5">
                         <div className="flex flex-col gap-5">
                             <div className="flex flex-col gap-2">
@@ -38,7 +38,7 @@ export const EventDetails = () => {
                             </option>
                         </select>
                     </div>
-                    <img src="/home/listing-2.jpg" alt="" />
+                    <img src="/home/listing-2.jpg" alt="" className='w-full'/>
                 </div>
                 <div className="w-full flex items-center gap-5 border border-[#e2e2e2] p-5">
                     <div className='flex items-center gap-2'>
@@ -50,7 +50,7 @@ export const EventDetails = () => {
                         <span className="text-[#8b8b8b]">Seminars</span>
                     </div>
                 </div>
-                <div className="flex items-center gap-5 w-full">
+                <div className="flex items-center gap-5 w-full max-lg:flex-col">
                     <div className="flex-1/3 w-full h-[300px] flex flex-col gap-5 bg-[#222] text-white p-15">
                         <h1 className='uppercase medium text-xl'>
                             Organizer
@@ -79,7 +79,7 @@ export const EventDetails = () => {
                             venue
                         </h1>
                         <div className="flex flex-col">
-                          
+
                             <span className='medium'>
                                 New York
                             </span>

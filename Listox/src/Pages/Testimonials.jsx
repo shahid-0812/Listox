@@ -41,7 +41,7 @@ export const Testimonials = () => {
         <div className='m-5'>
             <PageBanner />
             <div className="flex flex-col gap-5">
-                <div className=" py-25 my-5 rounded-t-3xl h-full border border-[#e2e2e2] relative ">
+                <div className=" py-25 my-5 rounded-t-3xl h-full border border-[#e2e2e2] relative max-lg:px-5 max-lg:py-15">
 
                     <img src="/home/bg-05.jpg" alt="" className='w-full h-full rounded-3xl object-cover absolute top-0 left-0 -z-1 opacity-50' />
                     <div className="flex justify-between gap-5 max-w-7xl w-full mx-auto ">
@@ -88,6 +88,18 @@ export const Testimonials = () => {
                                 speed={500}
                                 loop={true}
                                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+
+                                breakpoints={{
+                                    0: {
+                                        slidesPerView: 1,
+                                    },
+                                    768: {
+                                        slidesPerView: 2,
+                                    },
+                                    1025: {
+                                        slidesPerView: 3,
+                                    },
+                                }}
                             >
                                 {
                                     Review.map((item) => (
@@ -144,11 +156,10 @@ export const Testimonials = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-between gap-5 max-w-7xl w-full mx-auto py-15">
-                    <div className="w-3/4 flex flex-col gap-5">
+                    <div className="w-3/4 flex flex-col gap-5 max-lg:w-1/2">
                         <Heading
                             span='LOCAL BUSINESSES'
                             heading='What our customers feel about our services!'
-
                         />
                         <div className="w-full border-t border-[#e2e2e2] py-5">
                             <div className="flex flex-col gap-5">
@@ -180,11 +191,11 @@ export const Testimonials = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-3/12 flex flex-col">
-                        <div className='rounded-t-[150px] rounded-b-[20px] overflow-hidden w-full'>
-                            <img src="/home/image-12.jpg" alt="w-full h-full object-cover" />
+                    <div className="w-3/12 flex flex-col max-lg:w-1/2 items-center">
+                        <div className='rounded-t-[150px] rounded-b-[20px] overflow-hidden w-[80%]'>
+                            <img src="/home/image-12.jpg" alt=" h-full object-cover" />
                         </div>
-                        <div className="flex flex-col items-center py-12 gap-3 rounded-t-[150px] rounded-b-[20px] bg-[#ed5548] text-white ">
+                        <div className="flex flex-col items-center py-12 gap-3 rounded-t-[150px] rounded-b-[20px] bg-[#ed5548] text-white w-full ">
                             <div className="flex items-center gap-1 text-xl">
                                 <i className="bi bi-star-fill"></i>
                                 <i className="bi bi-star-fill"></i>

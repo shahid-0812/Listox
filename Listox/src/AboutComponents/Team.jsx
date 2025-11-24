@@ -137,8 +137,8 @@ export const Team = () => {
                 </div>
             </div>
             <div className="border-t border-[#E2E2E2] mt-20 ">
-                <div className="flex items-center  max-w-360 mx-auto w-full overflow-hidden">
-                    <div className="flex items-center text-xl border-r pr-6 py-15 border-[#E2E2E2] w-3/12">
+                <div className="flex items-center  max-w-360 mx-auto w-full overflow-hidden max-sm:flex-col ">
+                    <div className="flex items-center text-xl border-r pr-6 py-15 border-[#E2E2E2] w-3/12 max-sm:w-full max-sm:border-0 max-sm:justify-center">
                         <span className='semibold text-center max-w-[150px]'>
                             Trusted by top companies
                         </span>
@@ -156,10 +156,10 @@ export const Team = () => {
                             onSwiper={(swiper) => swiper.autoplay.start()}
                             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
 
-                            className="w-3/4"
+                            className="w-3/4 max-sm:w-full"
                             breakpoints={{
                                 0: {
-                                    slidesPerView: 3,
+                                    slidesPerView: 2,
                                 },
                                 768: {
                                     slidesPerView: 3

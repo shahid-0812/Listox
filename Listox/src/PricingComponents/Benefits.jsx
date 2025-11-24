@@ -3,10 +3,10 @@ import { Heading } from '../Components/Heading'
 
 export const Benefits = () => {
     return (
-        <div className='max-w-7xl w-full mx-auto py-15 flex justify-center pt-50  items-center gap-50 max-lg:gap-35 max-lg:px-5'>
+        <div className='max-w-7xl w-full mx-auto py-15 flex justify-center pt-50  items-center gap-50 max-lg:gap-35 max-lg:px-5 max-sm:flex-col max-sm:gap-5'>
             <div className="relative">
                 <img src="/home/image-34.jpg" alt="" className='rounded-xl hover:scale-110 transition duration-1000 hover:rotate-5 max-lg:w-[580px] max-lg:h-[500px] object-cover' />
-                <img src="/home/image-35.jpg" alt="" className='rounded-xl absolute top-1/2 -translate-y-1/2 -right-1/3 hover:scale-110 transition duration-1000 hover:rotate-5' />
+                <img src="/home/image-35.jpg" alt="" className='rounded-xl absolute top-1/2 -translate-y-1/2 -right-1/3 hover:scale-110 transition duration-1000 hover:rotate-5 max-sm:w-[60%] max-sm:right-0' />
             </div>
             <div className="flex flex-col gap-5">
                 <Heading

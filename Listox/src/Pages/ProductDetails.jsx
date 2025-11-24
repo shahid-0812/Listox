@@ -49,8 +49,8 @@ export const ProductDetails = () => {
         <div className='m-5'>
             <PageBanner />
             <div className='max-w-7xl w-full mx-auto flex flex-col gap-10 py-15'>
-                <div className="flex gap-5 w-full">
-                    <div className="w-1/2 h-full flex flex-col gap-3">
+                <div className="flex gap-5 w-full max-sm:flex-col">
+                    <div className="w-1/2 h-full flex flex-col gap-3 max-sm:w-full">
                         <InnerImageZoom
                             src="/home/product-4.jpg"
                             zoomSrc="/home/product-4ZOOM.jpg"
@@ -58,7 +58,7 @@ export const ProductDetails = () => {
                         />
                         <img src="" alt="" className='w-full h-full object-cover' />
                     </div>
-                    <div className="w-1/2 flex flex-col gap-5">
+                    <div className="w-1/2 flex flex-col gap-5 max-sm:w-full">
                         <h1 className='text-3xl bold'>
                             Block Ruffle Hem Plaid Print Color
                         </h1>

@@ -2,9 +2,9 @@ import React from 'react'
 
 export const DownloadApp = () => {
     return (
-        <div className='max-w-7xl  mx-auto w-full  bg-[#6053f0] flex items-end justify-between rounded-4xl translate-y-10'>
-            <div className='w-3/5 flex flex-col gap-5 p-20 max-lg:p-10'>
-                <span className="text-5xl cursive text-white">Get it now for free</span>
+        <div className='max-w-7xl  mx-auto w-full  bg-[#6053f0] flex items-end justify-between rounded-4xl translate-y-10 max-sm:flex-col'>
+            <div className='w-3/5 flex flex-col gap-5 max-sm:gap-2 p-20 max-lg:p-10 max-sm:w-full'>
+                <span className="text-5xl cursive text-white max-sm:text-3xl">Get it now for free</span>
                 <h1 className='text-5xl text-white bold max-lg:text-3xl'>
                     Download our Listox mobile app
                     <span className='text-[#ED5548]'> 15% off</span>
@@ -26,7 +26,7 @@ export const DownloadApp = () => {
                     </button>
                 </div>
             </div>
-            <div className="w-2/5 px-12">
+            <div className="w-2/5 px-12 max-sm:w-full max-sm:h-full max-sm:px-5">
                 <img src="/home/image-07.png" alt="" className='w-full h-full object-cover' />
             </div>
         </div>

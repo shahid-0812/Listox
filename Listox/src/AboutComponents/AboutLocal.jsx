@@ -96,7 +96,7 @@ export const AboutLocal = () => {
         <div className=" py-15 rounded-3xl overflow-hidden border border-[#e2e2e2] relative max-lg:px-5">
             <img src="/home/bg-02.jpg" alt="" className='w-full h-full object-cover absolute top-0 left-0 -z-1' />
             <div className="max-w-7xl mx-auto w-full flex flex-col justify-center gap-10">
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center max-sm:flex-col">
                     <Heading
                         span='local businesses'
                         heading='Let’s discover our hottest featured listings'

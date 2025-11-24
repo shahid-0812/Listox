@@ -17,7 +17,7 @@ export const HeroSection = () => {
 
 
     return (
-        <div className="flex flex-col relative rounded-3xl m-5">
+        <div className="flex flex-col relative rounded-3xl m-5 overflow-hidden">
             <NavHead />
 
 
@@ -42,9 +42,10 @@ export const HeroSection = () => {
                     />
                 ))}
                 <div className="flex flex-col items-center gap-8 z-10 uppercase text-white">
-                    <span className="text-sm px-5 py-2 rounded-full bold backdrop-blur-sm">find things you’ll love to have</span>
-                    <h1 className="text-[140px] leading-25 max-lg:text-[100px]">rediscover</h1>
-                    <span className="text-4xl mt-5 max-lg:text-3xl">the soul of your hometown</span>
+                    <span className="text-sm px-5 py-2 rounded-full bold backdrop-blur-sm max-sm:text-sm">
+                        find things you’ll love to have</span>
+                    <h1 className="text-[140px] leading-25 max-lg:text-[100px] max-sm:text-4xl max-sm:leading-0">rediscover</h1>
+                    <span className="text-4xl mt-5 max-lg:text-3xl max-sm:text-[16px]">the soul of your hometown</span>
                     <motion.div
                         animate={{ rotate: 360 }}
                         transition={{ repeat: Infinity, duration: 10, ease: "linear" }} className="bg-[#ED5548] z-10 rounded-full  w-[122px] h-[122px] flex items-center justify-center">
@@ -68,7 +69,7 @@ export const HeroSection = () => {
 
 
             </div>
-            <div className="flex flex-col gap-10 bg-white px-19 z-10 max-w-7xl mx-auto w-full rounded-3xl py-15 absolute left-1/2 -translate-x-1/2 -bottom-20" >
+            <div className="flex flex-col gap-10 bg-white px-19 z-10 max-w-7xl mx-auto w-full rounded-3xl py-15 absolute left-1/2 -translate-x-1/2 -bottom-20 max-sm:px-5 max-sm:w-fit max-sm:py-5" >
                 <div className="w-full flex justify-between">
                     <div className="corner-curve absolute -left-7.5 bottom-18"></div>
                     <div className="corner-curve absolute -right-7.5 bottom-18 scale-x-[-1]"></div>
@@ -88,7 +89,7 @@ export const HeroSection = () => {
                         <span>Search</span>
                     </button>
                 </div>
-                <div className="flex items-center gap-3 text-xs uppercase bold mx-5 browse">
+                <div className="flex items-center gap-3 text-xs uppercase bold mx-5 max-sm:flex-col">
                     <span>or browse the highlights</span>
                     <div className="flex items-center gap-1">
                         <span className="bg-[#6053F0] text-white rounded-full px-4 py-1.5">Traveling</span>

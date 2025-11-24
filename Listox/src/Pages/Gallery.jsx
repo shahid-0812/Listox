@@ -55,7 +55,7 @@ export const Gallery = () => {
             <PageBanner />
             <div className="max-w-7xl mx-auto w-full flex flex-wrap gap-8 py-15">
                 {GalleryImage.map((item) => (
-                    <div key={item.id} className="relative w-[31%] rounded-2xl overflow-hidden cursor-crosshair group">
+                    <div key={item.id} className="relative w-[31%] rounded-2xl overflow-hidden cursor-crosshair group max-lg:w-[47%] max-sm:w-full">
                         <img src={`home/listing-${item.id}.jpg`} alt="no" className="w-full" />
                         <div className="absolute top-0 left-0 w-full h-full bg-black/50 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-500">
                             <span className="bold text-2xl">{item.country}</span>

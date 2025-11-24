@@ -119,12 +119,12 @@ export const NewsDetails = () => {
     ];
     return (
         <div >
-            <div className='mx-5'>
+            <div className='mx-5 mt-5'>
                 <PageBanner />
             </div>
 
-            <div className="flex max-w-7xl mx-auto w-full gap-10 py-15">
-                <div className='w-2/3 flex flex-col gap-5'>
+            <div className="flex max-w-7xl mx-auto w-full gap-10 py-5 max-lg:px-5 max-lg:flex-col">
+                <div className='w-2/3 flex flex-col gap-5 max-lg:w-full'>
                     <div className="flex w-full overflow-hidden rounded-lg">
                         <img src="/home/post-02.jpg" alt="" className='w-full h-full object-cover' />
                     </div>
@@ -158,10 +158,10 @@ export const NewsDetails = () => {
                         <span className='semibold'>said Polito</span>
                     </div>
                     <div className="flex flex-col gap-5">
-                        
+
                         <div className="flex flex-col gap-5">
                             <span className="bold text-xl">Tags</span>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 flex-wrap">
                                 {
                                     Tags.map((tag, index) => (
 
@@ -175,8 +175,8 @@ export const NewsDetails = () => {
                         </div>
                         <div className="flex"></div>
                     </div>
-                    <div className="flex border border-[#e2e2e2]">
-                        <div className="w-1/3 flex items-center justify-center flex-col border-r border-[#e2e2e2] py-10">
+                    <div className="flex border border-[#e2e2e2] max-sm:flex-col">
+                        <div className="w-1/3 flex items-center justify-center flex-col border-r border-[#e2e2e2] py-10 max-sm:w-full">
                             <span className='text-6xl medium'>
                                 3.5
                                 <span className='text-2xl text-[#8b8b8b]'>/5</span>
@@ -184,29 +184,29 @@ export const NewsDetails = () => {
                             <span className='text-[#ED5548] semibold'>Very Good</span>
                             <span className='text-[#8b8b8b] medium'>3 verified reviews</span>
                         </div>
-                        <div className="w-2/3 py-10 flex gap-5 flex-col items-center justify-center px-10">
+                        <div className="w-2/3 py-10 flex gap-5 flex-col items-center justify-center px-10 max-sm:w-full">
                             <div className="flex items-center gap-8">
                                 <span className="semibold w-20">Quality</span>
-                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full"></div>
+                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full max-sm:w-50"></div>
                             </div>
                             <div className="flex items-center gap-8">
                                 <span className="semibold w-20">Hospitality</span>
-                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full"></div>
+                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full max-sm:w-50"></div>
                             </div>
                             <div className="flex items-center gap-8">
                                 <span className="semibold w-20">Service</span>
-                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full"></div>
+                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full max-sm:w-50"></div>
                             </div>
                             <div className="flex items-center gap-8">
                                 <span className="semibold w-20">Pricing</span>
-                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full"></div>
+                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full max-sm:w-50"></div>
                             </div>
 
                         </div>
                     </div>
                     <div className="flex flex-col gap-10">
                         <span className="relative before:content-[''] before:absolute before:w-15 before:h-0.5 before:-bottom-1 before:left-0 before:bg-[#ed5548] text-2xl bold">3 Reviews</span>
-                        <div className="flex gap-5 border-b border-[#e2e2e2] pb-5">
+                        <div className="flex gap-5 border-b border-[#e2e2e2] pb-5 max-sm:flex-col">
                             <img src="/home/avatar.jpeg" alt="no" className='w-[70px] h-[70px] rounded-full' />
                             <div className="flex flex-col gap-3 ">
                                 <span className='text-lg'>admin</span>
@@ -285,7 +285,7 @@ export const NewsDetails = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-2/6 flex flex-col gap-10">
+                <div className="w-2/6 flex flex-col gap-10 max-lg:w-full">
 
                     <div className="flex flex-col gap-5 p-5 border border-[#e2e2e2] rounded-lg">
                         <h1 className='text-xl bold uppercase'>Recent posts</h1>

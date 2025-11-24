@@ -34,12 +34,14 @@ export const Navbar = () => {
                 className={`fixed  z-101 flex justify-between items-center  backdrop-blur-md transition-all duration-500
                          ${scrolled
                         ? 'w-full left-0 top-0 translate-x-0 rounded-none bg-white shadow-md'
-                        : 'left-1/2 transform -translate-x-1/2 w-[90%] top-15  rounded-full bg-gray-100 bg-opacity-90 my-10'
-                    }`}
+                        : 'left-1/2 transform -translate-x-1/2 w-[90%] top-15  rounded-full bg-gray-100 bg-opacity-90 my-10 max-lg:top-12 max-sm:w-[80%]'
+                    }
+                    ${menuOpen ? "hidden" : "flex"}
+                    `}
             >
-                <div className="flex justify-between items-center gap-5 px-8">
+                <div className="flex justify-between items-center gap-5 px-8 max-lg:w-full max-lg:py-3">
 
-                    <img src="/logo.png" alt="logo" className='h-8' />
+                    <img src="/logo.png" alt="logo" className='h-8 max-lg:h-6' />
                     <i className="bi bi-list lg:hidden max-sm:flex" onClick={() => setMenuOpen(!menuOpen)}></i>
                     <div className="flex items-center gap-8 px-10 max-lg:hidden uppercase text-sm">
                         <NavLink to="/" className={hover}>Home</NavLink>
@@ -120,72 +122,44 @@ export const Navbar = () => {
             {menuOpen && (
                 <div
                     onClick={() => setMenuOpen(false)}
-                    className="fixed inset-0 bg-black/40 z-40"
+                    className="fixed inset-0 bg-[#6053F0] z-40"
                 ></div>
             )}
 
             {/* Mobile Menu */}
             <div
-                className={`fixed top-0 left-0 h-full w-full max-w-sm  p-6 bg-white shadow-lg transform transition-transform duration-300 z-500
+                className={`fixed top-0 left-0 h-full w-full max-w-xl  bg-white shadow-lg transform transition-transform duration-300 z-500
       ${menuOpen ? "translate-x-0" : "-translate-x-full"} lg:hidden`}
             >
-                <div className="flex flex-col h-full relative gap-5">
+                <div className="flex flex-col h-full relative gap-5 p-6">
                     <div className="flex justify-between items-center ">
-                        <img src="https://unifato.com/hosue/assets/img/logo/logo3.png" alt="logo" className='h-[38px]' />
+                        <img src="/logo.png" alt="logo" className='h-8' />
 
                         <i
                             onClick={() => setMenuOpen(false)}
-                            className="bi bi-x-lg self-end  cursor-pointer"
+                            className="bi bi-x-lg self-end text-3xl cursor-pointer text-[#ed5548]"
                         ></i>
                     </div>
 
-                    <div className="flex flex-col gap-3  ">
-                        <NavLink to="/" className={hover}>Home</NavLink>
-                        <NavLink to="/about" className={hover}>About Us</NavLink>
-                        <NavLink to="/apartment" className={hover}>Apartment</NavLink>
-                        <NavLink to="/blogs" className={hover}>Blogs</NavLink>
-                        <NavLink to="/gallery" className={hover}>Pages</NavLink>
-                        <NavLink to="/testimonials" className={hover}>Testimonials</NavLink>
-                        <NavLink to="/contact" className={hover}>Contact</NavLink>
+                    <div className="flex flex-col  uppercase text-sm  semibold ">
+                        <NavLink to="/" className="border-b border-[#e2e2e2] py-4 ">Home</NavLink>
+                        <NavLink to="/listing" className="border-b border-[#e2e2e2] py-4 ">listings</NavLink>
+                        <NavLink to="/pricing" className="border-b border-[#e2e2e2] py-4 ">pricing</NavLink>
+
+                        <NavLink to="/news" className="border-b border-[#e2e2e2] py-4 ">news</NavLink>
+                        <NavLink to="/contact" className="border-b border-[#e2e2e2] py-4 ">Contact</NavLink>
 
 
                     </div>
                     <div className="flex flex-col gap-3">
-                        <div className="flex flex-col gap-2">
-                            <h1 className="text-2xl bold">Contact Info</h1>
-                            <span className='semibold'> <i className="bi bi-telephone"></i> +3(924)4596512</span>
-                            <span className='semibold'> <i className="bi bi-envelope mr-2"></i>info@example.com</span>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h1 className="text-2xl bold">Our Location</h1>
-                            <span className='semibold'>
-                                <i className="bi bi-geo-alt-fill"></i>
-                                55 East Birchwood Ave.Brooklyn,
-                                New York 11201,United States
-                            </span>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <h1 className="text-2xl bold">Social Links</h1>
-                            <div className="flex items-center gap-2">
-                                <span className='bg-[#e6e8e7] rounded-full px-3 py-2'>
-                                    <i className="bi bi-facebook"></i>
-                                </span>
-                                <span className='bg-[#e6e8e7] rounded-full px-3 py-2'>
-                                    <i className="bi bi-google"></i>
-                                </span>
-                                <span className='bg-[#e6e8e7] rounded-full px-3 py-2'>
-                                    <i className="bi bi-linkedin"></i>
-                                </span>
-                                <span className='bg-[#e6e8e7] rounded-full px-3 py-2'>
-                                    <i className="bi bi-youtube"></i>
-                                </span>
-                            </div>
-                        </div>
+
                     </div>
 
-                    <div className="absolute bottom-0 left-0 w-full flex items-center px-6 gap-3 border-t border-gray-400 py-3">
-                        <i className="bi bi-person text-lg"></i>
-                        <span>Account</span>
+                    <div className="absolute bottom-0 left-0 w-full flex items-center  gap-5 text-white p-4 bg-black">
+                        <i className="bi bi-facebook"></i>
+                        <i className="bi bi-twitter-x"></i>
+                        <i className="bi bi-linkedin"></i>
+                        <i className="bi bi-youtube"></i>
                     </div>
                 </div>
             </div>

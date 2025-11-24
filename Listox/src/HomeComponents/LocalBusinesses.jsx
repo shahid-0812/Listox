@@ -215,8 +215,8 @@ export const LocalBusinesses = () => {
 
             </div>
             <div className="border-t border-[#E2E2E233] mt-20 ">
-                <div className="flex items-center  max-w-360 mx-auto w-full">
-                    <div className="flex items-center text-xl border-r pr-6 py-15 border-[#E2E2E233] w-3/12">
+                <div className="flex items-center  max-w-360 mx-auto w-full max-sm:flex-col">
+                    <div className="flex items-center text-xl border-r pr-6 py-15 border-[#E2E2E233] w-3/12 max-sm:w-full max-sm:border-0 max-sm:justify-center">
                         <span className='text-white semibold text-center max-w-[150px]'>
                             Trusted by top companies
                         </span>
@@ -235,7 +235,7 @@ export const LocalBusinesses = () => {
                             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                             breakpoints={{
                                 0: {
-                                    slidesPerView: 1,
+                                    slidesPerView: 2,
                                 },
                                 768: {
                                     slidesPerView: 3,
@@ -262,30 +262,3 @@ export const LocalBusinesses = () => {
     )
 }
 
-{/* <Swiper
-    modules={[Navigation]}
-    spaceBetween={20}
-    slidesPerView={3}
-    speed={500}
-    loop={true}
-    navigation={{
-        prevEl: prevRef.current,
-        nextEl: nextRef.current,
-    }}
-    onBeforeInit={(swiper) => {
-        swiper.params.navigation.prevEl = prevRef.current;
-        swiper.params.navigation.nextEl = nextRef.current;
-    }}
-    breakpoints={{
-        0: {
-            slidesPerView: 1, // mobile
-        },
-        768: {
-            slidesPerView: 3, // tablet
-        },
-        1025: {
-            slidesPerView: 4, // desktop
-        },
-    }}
-    className="w-full"
-></Swiper> */}

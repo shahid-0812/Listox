@@ -5,8 +5,8 @@ export const Feedback = () => {
     return (
         <div className='relative py-25 w-full max-lg:px-5'>
             <img src="/home/bg-10.png" alt="" className="absolute -z-1 top-0 left-0 w-full h-full object-cover" />
-            <div className="flex items-center justify-between gap-15 max-w-7xl mx-auto w-full">
-                <div className="flex flex-col gap-3 w-2/5">
+            <div className="flex items-center justify-between gap-15 max-w-7xl mx-auto w-full max-sm:flex-col">
+                <div className="flex flex-col gap-3 w-2/5 max-sm:w-full">
                     <Heading
                         span='OUR FEEDBACKS'
                         heading='Our feedbacks What they’re talking about us'
@@ -33,7 +33,7 @@ export const Feedback = () => {
                         Trust score 4.5 (Based on 2,500 reviews)
                     </span>
                 </div>
-                <div className='flex gap-5 w-3/5'>
+                <div className='flex gap-5 w-3/5 max-sm:w-full'>
                     <div className="bg-white  p-6 flex flex-col w-full gap-8 rounded-2xl max-lg:hidden">
                         <div className="flex justify-between items-center">
                             <div className="flex items-center gap-1 text-[#ed5548]">
@@ -89,15 +89,15 @@ export const Feedback = () => {
 
                 </div>
             </div>
-            <div className="max-w-7xl mx-auto w-full relative h-50 bg-[#ed5548] flex justify-evenly items-center translate-y-50">
-                <img src="/home/bg-cta.png" alt="n" className="absolute z-1 top-0 left-0 w-full h-full object-cover" />
+            <div className="max-w-7xl mx-auto w-full relative h-50 bg-[#ed5548] flex justify-evenly items-center translate-y-50 max-sm:flex-col max-sm:items-start max-sm:px-5">
+                <img src="/home/bg-cta.png" alt="n" className="absolute -z-1 top-0 left-0 w-full h-full object-cover object-left max-sm:opacity-30" />
                 <div className="flex items-center gap-5 text-white z-100">
                     <i className="bi bi-globe text-2xl"></i>
                     <div className="flex flex-col">
                         <span className='text-lg'>
                             Your story starts from here
                         </span>
-                        <span className="bold text-3xl">Let’s visit the best places</span>
+                        <span className="bold text-3xl max-sm:text-2xl">Let’s visit the best places</span>
                     </div>
                 </div>
                 <button className='bg-black text-white rounded-full px-3 py-2 text-sm'>

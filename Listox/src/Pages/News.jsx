@@ -67,7 +67,7 @@ export const News = () => {
                 {
                     currentItems.map((item) => (
 
-                        <div className='border border-[#e2e2e2] rounded-4xl p-5 hover:shadow-lg transition duration-300 w-[48%]'>
+                        <div className='border border-[#e2e2e2] rounded-4xl p-5 hover:shadow-lg transition duration-300 w-[48%] max-sm:w-full'>
                             <Link to='/newsdetails'>
                                 <div className="flex flex-col overflow-hidden rounded-3xl">
                                     <div className='relative '>
@@ -78,7 +78,7 @@ export const News = () => {
                                             </span>
                                             <span className="text-sm semibold">JUL</span>
                                         </div>
-                                        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-2xl px-4 py-4 flex items-center gap-5 text-sm text-[#8b8b8b]">
+                                        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-2xl px-4 py-4 flex items-center gap-5 text-sm text-[#8b8b8b] whitespace-nowrap">
                                             <span>
                                                 <i className="bi bi-person-fill mr-2 text-[#ed5548]"></i>
                                                 Admin

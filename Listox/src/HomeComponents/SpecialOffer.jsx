@@ -21,10 +21,10 @@ export const SpecialOffer = () => {
         center: "left-1/2 top-1/2 -translate-x-1/12 -translate-y-1/12",
     };
     return (
-        <div className='w-full relative h-[700px] max-lg:h-[500px] bg-[#6053f0] flex items-center justify-center overflow-hidden max-lg:px-5'>
-            <img src="/home/bg-0301.png" alt="" className='w-full h-full absolute top-0 left-0 ' />
-            <div className="flex items-center justify-center max-w-7xl py-15 z-100">
-                <div className="flex w-1/2 flex-col gap-5">
+        <div className='w-full relative h-[700px] max-lg:h-[500px] bg-[#6053f0] flex items-center justify-center overflow-hidden max-lg:px-5' >
+            <img src="/home/bg-0301.png" alt="" className='w-full h-full object-cover object-left absolute top-0 left-0  ' />
+            <div className="flex items-center justify-center max-w-7xl py-15 z-100 max-sm:flex-col ">
+                <div className="flex w-1/2 flex-col gap-5 max-sm:w-full">
                     <Heading
                         span='SPECIAL OFFER FOR YOU'
                         heading='Let’s Make Your Travel Dreams Come True'
@@ -37,8 +37,8 @@ export const SpecialOffer = () => {
                     <span className="text-white max-w-[450px]">There are many variations of passages of Lorem Ipsum available but the majority.</span>
                     <button className='rounded-full px-8 py-3 bg-white w-fit'>Start Booking</button>
                 </div>
-                <img src="home/image-05.png" className='absolute top-0 right-1/6' alt="" />
-                <div className="w-1/2 flex" onMouseMove={handleMouseMove}>
+                <img src="home/image-05.png" className='absolute top-0 right-1/6 max-sm:hidden' alt="" />
+                <div className="w-1/2 flex " onMouseMove={handleMouseMove} >
 
                     <img src="home/image-04.png" alt="" className={`w-full h-full object-cover z-2 transition duration-500 ${boxPosition[position]}  scale-animation`} />
                 </div>

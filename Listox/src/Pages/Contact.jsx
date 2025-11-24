@@ -44,12 +44,12 @@ export const Contact = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                     className='w-full  h-[450px] rounded-3xl'
                 ></iframe>
-                <div className="flex max-w-7xl w-full mx-auto absolute -bottom-30 -translate-x-1/2  left-1/2 gap-5 max-lg:static max-lg:translate-0 max-lg:flex-wrap">
+                <div className="flex max-w-7xl w-full mx-auto absolute -bottom-30 -translate-x-1/2  left-1/2 gap-5 max-lg:static max-lg:translate-0 max-lg:flex-wrap max-sm:py-5">
                     {
                         ContactDetails.map((detail) => (
 
 
-                            <div key={detail.id} className="flex flex-col items-center justify-center bg-white rounded-2xl w-[24%] max-lg:w-[48%] px-8 py-10 gap-3 border border-[#e2e2e2]">
+                            <div key={detail.id} className="flex flex-col items-center justify-center bg-white rounded-2xl w-[24%] max-lg:w-[48%] px-8 py-10 gap-3 border border-[#e2e2e2] max-sm:w-full">
                                 <span className='bg-[#f2f2f2] text-4xl p-5 rounded-2xl y'>
                                     <i className={`bi bi-${detail.icon} text-[#ed5548]`}></i>
                                 </span>
@@ -60,7 +60,7 @@ export const Contact = () => {
                     }
                 </div>
             </div>
-            <div className="flex flex-col gap-15 pt-55 max-w-4xl mx-auto w-full pb-15">
+            <div className="flex flex-col gap-15 pt-55 max-w-4xl mx-auto w-full pb-15 max-sm:pt-10">
                 <Heading
                     span='CONTACT WITH US'
                     heading='Ready to start? Send us a message anytime'
@@ -68,11 +68,11 @@ export const Contact = () => {
                     items='center'
                 />
                 <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 max-sm:flex-col">
                         <input type="text" placeholder='Your Name' className='border border-[#e2e2e2] rounded-full px-5 py-4 w-full placeholder:text-sm' />
                         <input type="text" placeholder='Phone Number' className='border border-[#e2e2e2] rounded-full px-5 py-4 w-full placeholder:text-sm' />
                     </div>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 max-sm:flex-col">
                         <input type="text" placeholder='Email Address' className='border border-[#e2e2e2] rounded-full px-5 py-4 w-full placeholder:text-sm' />
                         <input type="text" placeholder='Subject' className='border border-[#e2e2e2] rounded-full px-5 py-4 w-full placeholder:text-sm' />
                     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { PageBanner } from '../Components/PageBanner'
 import { Heading } from '../Components/Heading'
+import { motion } from 'framer-motion'
 
 export const Portfolio = () => {
     const PorfolioCard = [
@@ -32,12 +33,35 @@ export const Portfolio = () => {
     return (
         <div className='m-5'>
             <PageBanner />
-            <div className="relative max-w-7xl mx-auto flex justify-between gap-10 items-center w-full py-15 z-10 group">
-                <img src="/home/bg-03.png" alt="" className="absolute top-0 left-0" />
-                <img src="/home/bg-04.png" alt="" className="absolute -bottom-50 right-0" />
-                <div className="w-1/2">
+            <div className="relative max-w-7xl mx-auto flex justify-between gap-10 items-center w-full py-15 z-10 group max-sm:flex-col">
+                <img src="/home/bg-03.png" alt="" className="absolute top-0 left-0 max-lg:hidden" />
+                <img src="/home/bg-04.png" alt="" className="absolute -bottom-50 right-0 max-lg:hidden" />
+                <div className="w-1/2 max-sm:w-full">
                     <div className="relative">
-                        <img src="/home/image-06.jpg" className="rounded-4xl w-full h-full object-cover" alt="" />
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                ease: "linear",
+                                duration: 3,
+                            }}
+                            className="absolute top-5 left-10 max-lg:-top-1 max-lg:left-4" >
+                            <img src="/home/image-star.png" alt="" />
+                        </motion.div>
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                ease: "linear",
+                                duration: 3,
+                            }} className="absolute bottom-5 right-3 max-lg:-bottom-4 max-lg:-right-6 max-sm:right-0">
+                            <img src="/home/image-star-2.png" alt="" />
+                        </motion.div>
+                        <div className="mask-poly">
+                            <img src="/home/image-06.jpg" className="rounded-4xl w-full h-full object-cover" alt="" />
+                        </div>
                         <div className="flex items-center justify-center absolute bottom-10 left-10 border-2 border-white rounded-full px-2 py-3">
                             <div className="backdrop-blur-lg flex flex-col items-center gap-2 rounded-full px-5 py-6 group-hover:bg-[#ed5548] transition duration-300">
                                 <span className="text-5xl text-white bold ">26</span>
@@ -46,7 +70,7 @@ export const Portfolio = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2 flex flex-col gap-8">
+                <div className="w-1/2 flex flex-col gap-8 max-sm:w-full">
                     <Heading
                         span='GET TO KNOW US'
                         heading='Work Together for a Business Success'
@@ -77,7 +101,7 @@ export const Portfolio = () => {
                     center='text-center'
                     items='center'
                 />
-                <div className="flex justify-center gap-8 items-center medium">
+                <div className="flex justify-center gap-8 items-center medium max-sm:flex-wrap">
                     <span>All</span>
                     <span>Business</span>
                     <span>Finance</span>
@@ -89,8 +113,8 @@ export const Portfolio = () => {
                         PorfolioCard.map((item) => (
 
 
-                            <div key={item.id} className="flex flex-col rounded-xl w-[32%] overflow-hidden group max-lg:w-[48%]">
-                                <div className="w-full h-[350px] relative">
+                            <div key={item.id} className="flex flex-col rounded-xl w-[32%] overflow-hidden group max-lg:w-[48%] max-sm:w-full">
+                                <div className="w-full h-[350px] relative ">
                                     <img src={`home/listing-${item.id}.jpg`} alt="" className='rounded-xl w-full h-full object-cover' />
                                     <div className="absolute rounded-xl top-0 left-0 w-full h-full bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300"></div>
                                 </div>

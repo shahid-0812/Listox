@@ -22,7 +22,7 @@ export const UpcomingEvents = () => {
                     </div>
                 </div>
                 <div className='flex gap-8 rounded-3xl overflow-hidden h-[365px] w-[60%] border border-[#e2e2e2] p-5 max-lg:w-full'>
-                    <div className="relative w-4/10 ">
+                    <div className="relative w-4/10 max-sm:hidden">
                         <img src="/home/listing-2.jpg" alt="no" className=' h-full object-cover rounded-2xl ' />
                         <span className="absolute w-[90%] flex items-center gap-2 justify-center left-1/2 -translate-x-1/2 bottom-5 bg-white rounded-full px-3 py-2">
                             <i className="bi bi-clock text-[#6053f0]"></i>
@@ -48,7 +48,7 @@ export const UpcomingEvents = () => {
                 <div className='flex rounded-3xl overflow-hidden relative h-[365px] w-[20%] max-lg:w-full '>
                     <img src="/home/listing-13.jpg" alt="no" className='w-full h-full object-cover' />
                     <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
-                    <div className="flex w-full  gap-5 items-center justify-between absolute rotate-90 top-1/2 -translate-y-1/2 max-lg:rotate-0 max-lg:justify-center">
+                    <div className="flex w-full  gap-5 items-center justify-between absolute rotate-90 top-1/2 -translate-y-1/2 max-lg:rotate-0 max-lg:justify-center ">
                         <span className='text-2xl bold text-white'>Festival of Architecture and Interior</span>
                         <span className='bg-[#ed5548] text-xl rounded-full px-1 text-white w-fit h-fit'>
                             <i className="bi bi-plus"></i>

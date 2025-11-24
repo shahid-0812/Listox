@@ -41,7 +41,7 @@ export const HowITWorks = () => {
     return (
         <div className='m-5'>
             <PageBanner />
-            <div className="max-w-7xl mx-auto w-full flex flex-col justify-center items-center gap-20 py-15">
+            <div className="max-w-7xl mx-auto w-full flex flex-col justify-center items-center gap-20 py-15 max-lg:items-start max-lg:justify-start">
                 {
                     Works.map((item) => (
                         <div key={item.id} className="flex  items-end justify-center even:flex-row-reverse relative">
@@ -49,10 +49,10 @@ export const HowITWorks = () => {
                             <img
                                 src="/home/bg-04.png"
                                 alt=""
-                                className="absolute right-0 even:left-0 even:right-auto"
+                                className="absolute right-0 even:left-0 even:right-auto max-lg:hidden"
                             />
 
-                            <div className="flex flex-col gap-5 w-1/2">
+                            <div className="flex flex-col gap-5 w-1/2 ">
                                 <span className='text-[#ed5548] border-b border-[#e2e2e2] semibold uppercase pb-1'>
                                     {item.sub}
                                 </span>
@@ -95,9 +95,9 @@ export const HowITWorks = () => {
                     center='text-center'
                     items='center'
                 />
-                <div className="flex justify-center gap-25 items-center w-full relative">
+                <div className="flex justify-center gap-25 items-center w-full relative max-lg:flex-col max-lg:px-5">
                     <img src="/home/bg-19.png" alt="" className='absolute  right-0' />
-                    <div className="flex flex-col gap-5 w-1/4">
+                    <div className="flex flex-col gap-5 w-1/4 max-lg:w-full">
                         {
                             FAQ.map((que, index) => (
                                 <div key={index}
@@ -130,12 +130,12 @@ export const HowITWorks = () => {
                         }
 
                     </div>
-                    <div className="w-1/4 relative">
+                    <div className="w-1/4 relative max-lg:w-full max-lg:hidden">
 
-                        <div className='rounded-tl-[50%] rounded-tr-3xl rounded-bl-3xl overflow-hidden'>
+                        <div className='rounded-tl-[50%] rounded-tr-3xl rounded-bl-3xl overflow-hidden max-lg:w-[50%]'>
                             <img src="/home/image-34.jpg" alt="" className='w-full h-full object-cover object-bottom' />
                         </div>
-                        <div className='rounded-br-[70%]  rounded-tl-3xl overflow-hidden absolute bottom-0 -right-50'>
+                        <div className='rounded-br-[70%]  rounded-tl-3xl overflow-hidden absolute bottom-0 -right-50 max-lg:w-[30%] max-lg:right-0'>
                             <img src="/home/image-35.jpg" alt="" className='w-full h-full object-cover object-bottom' />
                         </div>
                         <img src="/home/image-03.png" alt="" className='absolute top-0 -right-70' />

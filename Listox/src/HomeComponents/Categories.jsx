@@ -26,7 +26,7 @@ export const Categories = () => {
                     Cat.map((item) => (
 
 
-                        <div key={item.id} className="flex gap-5 items-center bold border border-[#e2e2e2] hover:border-[#ed5548] transition duration-300 w-[23%] max-lg:w-[48%] rounded-xl p-6">
+                        <div key={item.id} className="flex gap-5 items-center bold border border-[#e2e2e2] hover:border-[#ed5548] transition duration-300 w-[23%] max-lg:w-[48%] rounded-xl p-6 max-sm:w-full">
                             <div className="flex flex-col border-r border-[#e2e2e2] flex-1/2 w-full">
                                 <span className='text-xs text-[#2222229a]'> {item.listing} Listings</span>
                                 <h1 className='text-lg'>{item.title}</h1>

@@ -19,7 +19,7 @@ export const Destination = () => {
     ];
 
     return (
-        <div className="flex flex-col gap-10 max-w-7xl mx-auto w-full py-15 mb-60 max-lg:px-5">
+        <div className="flex flex-col gap-10 max-w-7xl mx-auto w-full py-15 mb-60 max-lg:mb-0 max-lg:px-5">
             <Heading
                 span="NEW DESTINATION"
                 heading="Explore the world's favorite places to visit"
@@ -98,10 +98,10 @@ export const Destination = () => {
                     ))}
                 </Swiper>
             </div>
-            <div className="relative flex justify-between gap-10 items-center w-full py-15 z-10 group">
-                <img src="/home/bg-03.png" alt="" className="absolute top-0 left-0" />
-                <img src="/home/bg-04.png" alt="" className="absolute -bottom-50 right-0" />
-                <div className="w-1/2">
+            <div className="relative flex justify-between gap-10 items-center w-full py-15 z-10 group max-sm:flex-col">
+                <img src="/home/bg-03.png" alt="" className="absolute top-0 left-0 max-lg:hidden" />
+                <img src="/home/bg-04.png" alt="" className="absolute -bottom-50 right-0 max-lg:hidden" />
+                <div className="w-1/2 max-sm:w-full">
                     <div className="relative">
                         <motion.div
                             animate={{ rotate: 360 }}
@@ -135,7 +135,7 @@ export const Destination = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2 flex flex-col gap-8">
+                <div className="w-1/2 flex flex-col gap-8 max-sm:w-full">
                     <Heading
                         span='WHY CHOOSE US'
                         heading='See why you should choose our listox'

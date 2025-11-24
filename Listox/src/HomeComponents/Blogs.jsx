@@ -51,7 +51,7 @@ export const Blogs = () => {
         },
     ];
     return (
-        <div className='flex flex-col gap-5 max-w-7xl mx-auto w-full py-15'>
+        <div className='flex flex-col gap-5 max-w-7xl mx-auto w-full py-15 max-sm:px-5'>
             <Heading
                 span='LATEST BLOG POSTS'
                 heading='News that matters recent stories & analysis'
@@ -110,7 +110,7 @@ export const Blogs = () => {
                                                 </span>
                                                 <span className="text-sm semibold">JUL</span>
                                             </div>
-                                            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-2xl px-4 py-4 flex items-center gap-5 text-sm text-[#8b8b8b]">
+                                            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-2xl px-4 py-4 flex items-center gap-5 text-sm text-[#8b8b8b] whitespace-nowrap">
                                                 <span>
                                                     <i className="bi bi-person-fill mr-2 text-[#ed5548]"></i>
                                                     Admin

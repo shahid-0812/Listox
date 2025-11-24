@@ -4,8 +4,8 @@ export const NavHead = () => {
     const hover = "hover:text-white transition duration-300 cursor-pointer";
     const hover2 = "hover:text-[#ED5548] transition duration-300 cursor-pointer";
     return (
-        <div className="flex justify-between rounded-t-4xl items-center bg-[#222] px-20 p-3 max-lg:px-8 ">
-            <div className="flex items-center gap-5 text-[#cacaca] text-sm medium">
+        <div className="flex justify-between rounded-t-4xl items-center bg-[#222] px-20 p-3 max-lg:px-8  max-lg:rounded-t-2xl">
+            <div className="flex items-center gap-5 text-[#cacaca] text-sm medium max-lg:hidden">
                 <div className="flex items-center gap-2">
                     <i className="bi bi-envelope-fill text-[#ED5548]"></i>
                     <span className={hover}>contact@example.com</span>

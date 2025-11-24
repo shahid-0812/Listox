@@ -13,7 +13,7 @@ export const PageBanner = () => {
         return () => clearInterval(interval);
     }, [images.length]);
     return (
-        <div className="flex flex-col rounded-4xl">
+        <div className="flex flex-col rounded-4xl overflow-hidden">
             <NavHead />
             <div className="relative w-full h-[450px] overflow-hidden flex flex-col items-center justify-center gap-10 rounded-b-3xl">
                 <div className="absolute top-0 left-0 bg-black/40 w-full h-full z-10"></div>
@@ -34,9 +34,9 @@ export const PageBanner = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                     />
                 ))}
-                <div className="flex flex-col items-center z-10 uppercase text-white">
-                    <h1 className="text-5xl bold leading-10">Explore The Worlds</h1>
-                    <span className="text-xl mt-5">People Don’t Take, Trips Take People</span>
+                <div className="flex flex-col items-center z-10 uppercase text-white max-sm:text-center max-sm:px-5">
+                    <h1 className="text-5xl bold leading-10 max-sm:text-2xl max-sm:leading-1">Explore The Worlds</h1>
+                    <span className="text-xl mt-5 capitalize">People Don’t Take, Trips Take People</span>
 
                 </div>
             </div>

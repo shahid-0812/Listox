@@ -25,7 +25,7 @@ export const Events = () => {
                         EventName.map((name, index) => (
 
 
-                            <div key={index} className="flex flex-col gap-5 shadow-lg rounded-xl py-7 pl-7 w-[48%]">
+                            <div key={index} className="flex flex-col gap-5 shadow-lg rounded-xl py-7 pl-7 w-[48%] max-lg:w-full">
                                 <div className="flex w-full justify-between items-center">
                                     <span className='rounded-full bg-[#ED5548] text-white px-4 py-2'
                                     >

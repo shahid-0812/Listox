@@ -118,12 +118,12 @@ export const Listing = () => {
             <div className='mx-5'>
                 <PageBanner />
             </div>
-            <div className="py-10 bg-[#f7f7f7]">
-                <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
+            <div className="py-10 bg-[#f7f7f7] max-lg:px-5">
+                <div className="max-w-7xl mx-auto w-full flex justify-between items-center max-sm:flex-col max-sm:gap-5 max-sm:items-start">
                     <div className="flex items-center gap-2">
-                        <img src="/home/logo-listing-1.jpg" alt="" />
+                        <img src="/home/logo-listing-1.jpg" alt="" className='max-sm:w-20' />
                         <div className="flex flex-col gap-2">
-                            <h1 className='text-3xl bold'>Shape gym training</h1>
+                            <h1 className='text-3xl bold max-sm:text-xl'>Shape gym training</h1>
                             <div className="flex items-baseline gap-2">
                                 <span className='text-[#8b8b8b] text-sm semibold'>
                                     <i className="bi bi-check-circle-fill text-[#11d06b] mr-2"></i>
@@ -137,7 +137,7 @@ export const Listing = () => {
                                         <i className="bi bi-star-fill"></i>
                                         <i className="bi bi-star-fill"></i>
                                     </div>
-                                    <span className="semibold text-[#8b8b8b]">3.5 by 3 reviews</span>
+                                    <span className="semibold text-[#8b8b8b] max-sm:hidden">3.5 by 3 reviews</span>
                                 </div>
                             </div>
                             <span className='text-[#8b8b8b]'>Best Traveling in the UK</span>
@@ -159,8 +159,8 @@ export const Listing = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex max-w-7xl mx-auto w-full gap-10 py-15">
-                <div className='w-3/5 flex flex-col gap-5'>
+            <div className="flex max-w-7xl mx-auto w-full gap-10 py-15 max-lg:flex-col max-lg:px-5">
+                <div className='w-3/5 flex flex-col gap-5 max-lg:w-full'>
                     <div className="flex w-full">
                         <img src="/home/listing-14.jpg" alt="" className='w-full h-full object-cover' />
                     </div>
@@ -188,11 +188,11 @@ export const Listing = () => {
                     </div>
                     <div className="flex flex-col gap-5">
                         <div className="w-full">
-                            <iframe width="774" height="435" src="https://www.youtube.com/embed/MtCMtC50gwY" title="New York City Vacation Travel Guide | Expedia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe className='w-full h-[400px] object-cover max-sm:h-[200px]' src="https://www.youtube.com/embed/MtCMtC50gwY" title="New York City Vacation Travel Guide | Expedia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                         <div className="flex flex-col gap-5">
                             <span className="bold text-xl">Tags</span>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2 flex-wrap" >
                                 {
                                     Tags.map((tag, index) => (
 
@@ -206,8 +206,8 @@ export const Listing = () => {
                         </div>
                         <div className="flex"></div>
                     </div>
-                    <div className="flex border border-[#e2e2e2]">
-                        <div className="w-1/3 flex items-center justify-center flex-col border-r border-[#e2e2e2] py-10">
+                    <div className="flex border border-[#e2e2e2] max-sm:flex-col">
+                        <div className="w-1/3 flex items-center justify-center flex-col border-r border-[#e2e2e2] py-10 max-sm:w-full">
                             <span className='text-6xl medium'>
                                 3.5
                                 <span className='text-2xl text-[#8b8b8b]'>/5</span>
@@ -215,29 +215,29 @@ export const Listing = () => {
                             <span className='text-[#ED5548] semibold'>Very Good</span>
                             <span className='text-[#8b8b8b] medium'>3 verified reviews</span>
                         </div>
-                        <div className="w-2/3 py-10 flex gap-5 flex-col items-center justify-center px-10">
+                        <div className="w-2/3 py-10 flex gap-5 flex-col items-center justify-center px-10 max-sm:w-full">
                             <div className="flex items-center gap-8">
                                 <span className="semibold w-20">Quality</span>
-                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full"></div>
+                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full max-sm:w-50"></div>
                             </div>
                             <div className="flex items-center gap-8">
                                 <span className="semibold w-20">Hospitality</span>
-                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full"></div>
+                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full max-sm:w-50"></div>
                             </div>
                             <div className="flex items-center gap-8">
                                 <span className="semibold w-20">Service</span>
-                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full"></div>
+                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full max-sm:w-50"></div>
                             </div>
                             <div className="flex items-center gap-8">
                                 <span className="semibold w-20">Pricing</span>
-                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full"></div>
+                                <div className="w-80 h-2.5  bg-[#e2e2e2] rounded-full relative  before:content-[''] before:absolute before:w-[70%] before:h-full before:top-0 before:left-0 before:bg-[#ed5548] before:rounded-full max-sm:w-50"></div>
                             </div>
 
                         </div>
                     </div>
                     <div className="flex flex-col gap-10">
                         <span className="relative before:content-[''] before:absolute before:w-15 before:h-0.5 before:-bottom-1 before:left-0 before:bg-[#ed5548] text-2xl bold">3 Reviews</span>
-                        <div className="flex gap-5 border-b border-[#e2e2e2] pb-5">
+                        <div className="flex gap-5 border-b border-[#e2e2e2] pb-5 max-sm:flex-col">
                             <img src="/home/avatar.jpeg" alt="no" className='w-[70px] h-[70px] rounded-full' />
                             <div className="flex flex-col gap-3 ">
                                 <span className='text-lg'>admin</span>
@@ -316,7 +316,7 @@ export const Listing = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-2/5 flex flex-col gap-10">
+                <div className="w-2/5 flex flex-col gap-10 max-lg:w-full ">
                     <div className="flex flex-col shadow-2xl">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5464675033077!2d-0.12209412310046139!3d51.503189711010585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2sLondon%20Eye!5e0!3m2!1sen!2sin!4v1763382660556!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='h-[400px]'></iframe>
                         <div className="flex flex-col gap-5 px-8 py-6 justify-center">
@@ -362,6 +362,38 @@ export const Listing = () => {
 
                             ))
                         }
+                    </div>
+                    <div className="flex flex-col gap-5 p-5 border border-[#e2e2e2] rounded-lg">
+                        <h1 className='text-xl bold'>Additional info
+                        </h1>
+
+                        <div className="w-full flex justify-between  border-[#e2e2e2] ">
+                            <span className="text-[#8b8b8b]">Plan Your Visit</span>
+                            <span className="text-black">Today</span>
+                        </div>
+                        <div className="w-full flex justify-between  border-[#e2e2e2] ">
+                            <span className="text-[#8b8b8b]">Accept Credit Card</span>
+                            <span className="text-black">Yes</span>
+                        </div>
+                        <div className="w-full flex justify-between  border-[#e2e2e2] ">
+                            <span className="text-[#8b8b8b]">Car Parking</span>
+                            <span className="text-black">Yes</span>
+                        </div>
+                        <div className="w-full flex justify-between  border-[#e2e2e2] ">
+                            <span className="text-[#8b8b8b]">Program Guide</span>
+                            <span className="text-black">Yes</span>
+                        </div>
+                        <div className="w-full flex justify-between  border-[#e2e2e2] ">
+                            <span className="text-[#8b8b8b]">Electronic Courtesy</span>
+                            <span className="text-black">Yes</span>
+                        </div>
+                    </div>
+                    <div className="w-full h-[500px] overflow-hidden  relative flex flex-col p-15 justify-center gap-4">
+                        <img src="/home/bg-7.jpg" alt="" className='w-full  object-cover absolute top-0 left-0 -z-1' />
+                        <h1 className='bold text-white text-2xl max-w-[200px]'>Subscribe Our Newsletter</h1>
+                        <span className="text-white">SPECIAL ADVISORS</span>
+                        <span className='text-white max-w-[150px]'>Quis autem vel eum iure repreh ende</span>
+                        <button class="text-white w-fit text-sm bg-[#ED5548] px-5 py-3 rounded-full  flex items- gap-1 cursor-pointer hover:opacity-80 transition duration-300"><span>Subscribe</span><i class="bi bi-plus"></i></button>
                     </div>
                 </div>
             </div>

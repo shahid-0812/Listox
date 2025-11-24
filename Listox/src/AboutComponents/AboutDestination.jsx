@@ -3,11 +3,11 @@ import { Heading } from '../Components/Heading'
 
 export const AboutDestination = () => {
     return (
-        <div className='max-w-7xl w-full mx-auto border border-[#e2e2e2] rounded-3xl mt-10 flex overflow-hidden items-stretch gap-5 h-[500px]'>
-            <div className='w-1/2 h-full '>
+        <div className='max-w-7xl w-full mx-auto border border-[#e2e2e2] rounded-3xl mt-10 flex overflow-hidden items-stretch gap-5  max-sm:flex-col'>
+            <div className='w-1/2 h-full max-sm:w-full'>
                 <img src="/home/image-15.jpg" alt="" className='w-full h-full object-cover' />
             </div>
-            <div className="flex flex-col gap-5 w-1/2 px-15 max-lg:px-5 max-lg:py-10 self-center">
+            <div className="flex flex-col gap-5 w-1/2 px-15 max-lg:px-5 max-lg:py-10 self-center max-sm:w-full">
                 <Heading
                     span='NEW DESTINATION'
                     heading='Benefits of listox'
