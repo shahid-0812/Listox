@@ -25,8 +25,8 @@ export const Events = () => {
                     {
                         EventName.map((name, index) => (
 
-                            <Link to='/eventdetails'>
-                                <div key={index} className="flex flex-col gap-5 shadow-lg rounded-xl py-7 pl-7 w-[48%] max-lg:w-full ">
+                          
+                                <Link to='/eventdetails' key={index} className="flex flex-col gap-5 shadow-lg rounded-xl py-7 pl-7 w-[48%] max-lg:w-full ">
                                     <div className="flex w-full justify-between items-center">
                                         <span className='rounded-full bg-[#ED5548] text-white px-4 py-2'
                                         >
@@ -64,8 +64,8 @@ export const Events = () => {
                                         </div>
                                     </div>
 
-                                </div>
-                            </Link>
+                                </Link>
+                           
                         ))
                     }
                 </div>

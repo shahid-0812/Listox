@@ -9,6 +9,7 @@ export const LocalBusinesses = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [heartClick, setheartClick] = useState(false);
     const Businesses = [
         {
             id: "1",
@@ -155,7 +156,7 @@ export const LocalBusinesses = () => {
                                                         <span className=' text-[10px] px-3 py-1 rounded-full text-white semibold uppercase bg-[#6053f0]'>Featured</span>
                                                     </div>
                                                     <span className="border border-white p-2 py-1 text-white rounded-full">
-                                                        <i className="bi bi-suit-heart"></i>
+                                                        <i className="bi bi-suit-heart-fill"></i>
                                                     </span>
                                                 </div>
                                                 <div className="flex">

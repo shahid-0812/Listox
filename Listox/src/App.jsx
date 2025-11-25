@@ -23,6 +23,7 @@ import { ProductDetails } from "./Pages/ProductDetails"
 import { useState } from "react"
 import { Cart } from "./Components/Cart"
 import { Register } from "./Pages/Register";
+import { NotFound } from "./Pages/NotFound";
 
 function App() {
 
@@ -43,13 +44,32 @@ function AppWrapper() {
   const [cartOpen, setCartOpen] = useState(false);
   const location = useLocation();
 
-  const hideNavbarRoutes = ["/register"];
+  const validRoutes = [
+    "/",
+    "/contact",
+    "/about",
+    "/listing",
+    "/gallery",
+    "/pricing",
+    "/portfolio",
+    "/shop",
+    "/news",
+    "/howitworks",
+    "/events",
+    "/member",
+    "/testimonials",
+    "/newsdetails",
+    "/eventdetails",
+    "/productdetails",
+    "/register"
+  ];
 
-  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
+  const isNotFound = !validRoutes.includes(location.pathname);
+  const hideNavbar = location.pathname === "/register" || isNotFound;
   return (
     <>
 
-      {!shouldHideNavbar && (
+      {!hideNavbar && (
         <>
           <Navbar cartOpen={cartOpen} setCartOpen={setCartOpen} />
           <Cart cartOpen={cartOpen} setCartOpen={setCartOpen} />
@@ -74,11 +94,16 @@ function AppWrapper() {
         <Route path="/eventdetails" element={<EventDetails />} />
         <Route path="/productdetails" element={<ProductDetails />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/*" element={<NotFound />} />
 
 
       </Routes>
 
-      {!shouldHideNavbar && <Footer />}
+      {!hideNavbar && (
+        <>
+          <Footer />
+        </>
+      )}
     </>
   )
 }

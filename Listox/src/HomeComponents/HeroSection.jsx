@@ -76,14 +76,18 @@ export const HeroSection = () => {
                 </div>
                 <div className="flex items-center rounded-full border border-[#e2e2e2] max-lg:overflow-hidden max-lg:gap-3 max-lg:flex-col max-lg:p-5 text-[#8b8b8b] max-lg:rounded-2xl">
                     <input type="text" placeholder="What are you looking for?" className="flex-1 border-none outline-none px-5 max-lg:w-full max-lg:text-center max-lg:py-3" />
-                    <div className="flex justify-between items-center flex-1 border-x max-lg:border-x-0 max-lg:border-y border-[#e2e2e2] py-6 px-5 max-lg:w-full max-lg:py-3 max-lg:justify-center">
-                        <span>All Categories</span>
+                    <select className="flex justify-between items-center flex-1 border-x max-lg:border-x-0 max-lg:border-y border-[#e2e2e2] py-6 px-5 max-lg:w-full max-lg:py-3 max-lg:justify-center border-0 outline-0">
+                        <option>All Categories</option>
+                        <option>Fitness</option>
                         <i className="bi bi-chevron-down"></i>
-                    </div>
-                    <div className="flex justify-between items-center flex-1 px-5">
-                        <span>All Categories</span>
+                    </select>
+                    <select className="flex justify-between items-center flex-1 px-5 border-0 outline-0">
+                       
+                        <option value="">All regions</option>
+                        <option value="">India</option>
+                        <option value="">USA</option>
                         <i className="bi bi-chevron-down"></i>
-                    </div>
+                    </select>
                     <button className="text-white max-lg:w-full bg-[#ED5548] px-10 py-4 rounded-full m-2 flex items-center gap-3 cursor-pointer max-sm:justify-center hover:opacity-80 transition duration-300">
                         <i className="bi bi-search"></i>
                         <span>Search</span>
